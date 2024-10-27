@@ -1,0 +1,5 @@
+packages:
+  - "apps/*"
+  - "libs/@core/*"
+  - "libs/@theme/*"
+  - "libs/@library/*"
