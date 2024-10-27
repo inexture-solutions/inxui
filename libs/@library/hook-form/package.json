@@ -1,0 +1,48 @@
+{
+  "name": "@inexture/hook-form",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "export": "./src/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --ext .tsx,.jsx,.ts --max-warnings 0",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@inexture/base": "workspace:*",
+    "@inexture/dates": "workspace:*",
+    "@inexture/dropzone": "workspace:*",
+    "@types/node": "^22.8.0",
+    "@types/react": "^18.3.12",
+    "tsup": "^8.3.4",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@tabler/icons-react": "^3.20.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-dropzone-esm": "^15.0.1",
+    "react-hook-form": "^7.53.1",
+    "react-phone-input-2": "^2.15.1",
+    "zod": "^3.23.8"
+  },
+  "peerDependencies": {
+    "@inexture/base": "*",
+    "@inexture/dates": "*",
+    "@inexture/dropzone": "*"
+  }
+}
