@@ -1,5 +1,5 @@
 packages:
-  - "apps/*"
+  - "apps/docs"
   - "libs/@core/*"
   - "libs/@theme/*"
   - "libs/@library/*"

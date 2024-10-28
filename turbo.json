@@ -25,28 +25,6 @@
     "dev": {
       "cache": false,
       "persistent": true
-    },
-    "changeset": {
-      "inputs": [
-        "$TURBO_DEFAULT$",
-        "**/*.md"
-      ],
-      "outputs": [],
-      "cache": false
-    },
-    "version": {
-      "dependsOn": [
-        "build"
-      ],
-      "outputs": [],
-      "cache": false
-    },
-    "publish": {
-      "dependsOn": [
-        "version"
-      ],
-      "outputs": [],
-      "cache": false
     }
   }
 }
