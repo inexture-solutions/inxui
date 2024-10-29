@@ -1,0 +1,45 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.0.3/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    {
+      "repo": "inexture-solutions/inxui",
+      "template": {
+        "header": "# Changelog for ${packageName} - v${version}\n\n---\n",
+        "release": "- **${type}**: ${summary}\n",
+        "major": "## 🚨 Breaking Changes\n\n- **${summary}**\n",
+        "minor": "## ✨ New Features\n\n- **${summary}**\n",
+        "patch": "## 🐛 Bug Fixes\n\n- **${summary}**\n",
+        "dependencyUpdate": "### 📦 Dependency Updates\n\n$DEPENDENCY_UPDATES\n- Updated **${name}** from **${previousVersion}** to **${newVersion}**\n",
+        "footer": "\n---\n*Changelog generated on ${timestamp}. Maintained by [Inexture Team](https://www.inexture.com). For support or feedback, feel free to reach out!*"
+      }
+    }
+  ],
+  "commit": true,
+  "fixed": [
+    [
+      "@inexture/*"
+    ]
+  ],
+  "baseBranch": "main",
+  "access": "public",
+  "updateInternalDependencies": "patch",
+  "ignore": [],
+  "snapshot": {
+    "useCalculatedVersion": true,
+    "prereleaseTemplate": "{tag}-{commitHash}",
+    "tag": "snapshot"
+  },
+  "message": "chore(release): update versions",
+  "versionOptions": {
+    "onlyUpdatePeerDependentsWhenOutOfRange": true,
+    "useCalculatedVersionForSnapshots": true,
+    "updateInternalDependencies": "patch"
+  },
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+    "updateInternalDependencies": "minor"
+  },
+  "release": {
+    "tag": "next"
+  }
+}
