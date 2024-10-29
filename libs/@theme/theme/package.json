@@ -1,0 +1,33 @@
+{
+  "name": "@inexture/theme",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  ".": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 0",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "keywords": [
+    "inexture"
+  ],
+  "author": "inexture",
+  "devDependencies": {
+    "@inexture/base": "workspace:*",
+    "tsup": "^8.3.4",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "@inexture/base": "workspace:*"
+  }
+}
