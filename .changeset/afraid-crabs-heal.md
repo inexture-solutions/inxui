@@ -14,4 +14,4 @@
 "@inexture/theme": minor
 ---
 
-Testing auto deployment
+## Auto Tagging and Publish

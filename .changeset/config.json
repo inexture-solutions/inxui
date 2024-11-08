@@ -5,13 +5,13 @@
     {
       "repo": "inexture-solutions/inxui",
       "template": {
-        "header": "# Changelog for ${packageName} - v${version}\n\n---\n",
+        "header": "# 📦 Changelog for ${packageName} - v${version}\n\n---\n",
         "release": "- **${type}**: ${summary}\n",
-        "major": "## 🚨 Breaking Changes\n\n- **${summary}**\n",
-        "minor": "## ✨ New Features\n\n- **${summary}**\n",
-        "patch": "## 🐛 Bug Fixes\n\n- **${summary}**\n",
-        "dependencyUpdate": "### 📦 Dependency Updates\n\n$DEPENDENCY_UPDATES\n- Updated **${name}** from **${previousVersion}** to **${newVersion}**\n",
-        "footer": "\n---\n*Changelog generated on ${timestamp}. Maintained by [Inexture Team](https://www.inexture.com). For support or feedback, feel free to reach out!*"
+        "major": "## 🚨 Breaking Changes\n\n- **${summary}**\n\n*Impact*: Please review these changes carefully as they may require code modifications or configuration adjustments.",
+        "minor": "## ✨ New Features\n\n- **${summary}**\n\n*Details*: This release includes new features that may enhance or extend functionality.",
+        "patch": "## 🐛 Bug Fixes\n\n- **${summary}**\n\n*Resolution*: Bug fixes included to address reported issues and improve stability.",
+        "dependencyUpdate": "### 📦 Dependency Updates\n\n$DEPENDENCY_UPDATES\n- Updated **${name}** from **${previousVersion}** to **${newVersion}**\n\n*Note*: Please check compatibility if your code relies on this dependency.",
+        "footer": "\n---\n*Changelog generated on ${timestamp} by [Inexture Team](https://inexture.com). Maintained by the [Inexture Team](https://www.inexture.com). For support or feedback, reach out to us!*"
       }
     }
   ],
