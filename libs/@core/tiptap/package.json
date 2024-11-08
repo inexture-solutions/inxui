@@ -1,6 +1,6 @@
 {
   "name": "@inexture/tiptap",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css"
