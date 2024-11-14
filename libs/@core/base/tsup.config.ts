@@ -6,6 +6,13 @@ export default defineConfig((options) => ({
   format: ["cjs", "esm"],
   dts: true,
   sourcemap: true,
-  external: ["react", "@mantine/core", "@mantine/hooks"],
+  external: [
+    "react",
+    "@mantine/core",
+    "@mantine/hooks",
+    "zustand",
+    "@iconify/react",
+    "crypto-ts",
+  ],
   ...options,
 }));
