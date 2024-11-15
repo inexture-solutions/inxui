@@ -51,25 +51,51 @@ jobs:
       - name: Configure NPM Authentication
         run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_INX_UI_TOKEN }}
 
-      - name: Build Changed Packages
-        run: pnpm turbo run build --filter=...[HEAD^1]
-
-      - name: Check for Changes
-        id: changes_check
+      - name: Check for Pending Changesets
+        id: changeset_check
         run: |
-          git fetch origin main
-          git diff --quiet origin/main HEAD || echo "Changes detected."
+          pnpm changeset status
         continue-on-error: true
 
-      - name: Skip if No Changes
+      - name: Skip if No Pending Changesets
         if: ${{ failure() }}
-        run: echo "No changes detected, skipping release creation."
+        run: echo "No pending changesets, skipping release creation."
+
+      - name: Build Changed Packages
+        if: ${{ success() }}
+        run: pnpm turbo run build --filter=...[HEAD^1]
 
       - name: Run Release Script
         if: ${{ success() }}
         run: pnpm run release
         env:
           NPM_TOKEN: ${{ secrets.NPM_INX_UI_TOKEN }}
+
+      - name: Add release.json to Each Built Package
+        if: ${{ success() }}
+        run: |
+          echo "Adding release.json to built packages."
+          BUILD_DIRS=$(pnpm turbo run build --dry-run --filter=...[HEAD^1] | grep "output:" | awk '{print $2}')
+          for dir in $BUILD_DIRS; do
+            PACKAGE_JSON="$dir/package.json"
+            if [ -f "$PACKAGE_JSON" ]; then
+              PACKAGE_NAME=$(jq -r .name "$PACKAGE_JSON")
+              PACKAGE_VERSION=$(jq -r .version "$PACKAGE_JSON")
+              COMMIT_HASH=$(git rev-parse --short HEAD)
+
+              echo "Creating release.json for $PACKAGE_NAME@$PACKAGE_VERSION"
+              echo "{\"name\": \"$PACKAGE_NAME\", \"version\": \"$PACKAGE_VERSION\", \"commit\": \"$COMMIT_HASH\"}" > "$dir/release.json"
+            fi
+          done
+
+      - name: Commit and Push release.json Files
+        if: ${{ success() }}
+        run: |
+          git config user.name "m4st3rai"
+          git config user.email "developer@inexture.com"
+          git add */release.json
+          git commit -m "chore: add release.json for built packages"
+          git push origin main
 
       - name: Create GitHub Release
         if: ${{ success() }}
@@ -116,21 +142,3 @@ jobs:
             });
 
             console.log(`Created GitHub release with tag: ${latestTag}`);
-
-            // Create release.json
-            const releaseData = {
-              packages,
-              tag: latestTag
-            };
-
-            fs.writeFileSync('./release.json', JSON.stringify(releaseData, null, 2));
-            console.log('release.json file created with package versions from libs directory.');
-
-      - name: Commit and Push release.json
-        if: ${{ success() }}
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add release.json
-          git commit -m "chore: add release.json for ${GITHUB_SHA}"
-          git push origin main
