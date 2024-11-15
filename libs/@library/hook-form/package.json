@@ -25,18 +25,18 @@
     "@inexture/base": "workspace:*",
     "@inexture/dates": "workspace:*",
     "@inexture/dropzone": "workspace:*",
-    "@types/node": "^22.8.0",
+    "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
-    "tsup": "^8.3.4",
+    "tsup": "^8.3.5",
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "@hookform/resolvers": "^3.9.0",
-    "@tabler/icons-react": "^3.20.0",
+    "@hookform/resolvers": "^3.9.1",
+    "@tabler/icons-react": "^3.22.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-dropzone-esm": "^15.0.1",
-    "react-hook-form": "^7.53.1",
+    "react-hook-form": "^7.53.2",
     "react-phone-input-2": "^2.15.1",
     "zod": "^3.23.8"
   },

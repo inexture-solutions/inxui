@@ -1,11 +1,15 @@
-import { defineConfig } from "tsup";
+import { defineConfig, Options } from "tsup";
 
-export default defineConfig((options) => ({
+const commonConfig: Options = {
   name: "base",
-  entry: ["src/index.ts"],
   format: ["cjs", "esm"],
   dts: true,
   sourcemap: true,
+  minify: true,
+  minifyWhitespace: true,
+  minifySyntax: true,
+  clean: true,
+  splitting: true,
   external: [
     "react",
     "@mantine/core",
@@ -14,5 +18,27 @@ export default defineConfig((options) => ({
     "@iconify/react",
     "crypto-ts",
   ],
-  ...options,
-}));
+};
+
+export default defineConfig([
+  {
+    entry: ["src/index.ts"],
+    outDir: "dist",
+    ...commonConfig,
+  },
+  {
+    entry: ["src/framework/index.ts"],
+    outDir: "dist/framework",
+    ...commonConfig,
+  },
+  {
+    entry: ["src/plugins/index.ts"],
+    outDir: "dist/plugins",
+    ...commonConfig,
+  },
+  {
+    entry: ["src/theme/index.ts"],
+    outDir: "dist/theme",
+    ...commonConfig,
+  },
+]);

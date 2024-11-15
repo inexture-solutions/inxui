@@ -16,6 +16,24 @@
       "export": "./src/index.js",
       "require": "./dist/index.js"
     },
+    "./framework": {
+      "types": "./dist/framework/index.d.ts",
+      "import": "./dist/framework/index.mjs",
+      "export": "./src/framework/index.ts",
+      "require": "./dist/framework/index.js"
+    },
+    "./plugins": {
+      "types": "./dist/plugins/index.d.ts",
+      "import": "./dist/plugins/index.mjs",
+      "export": "./src/plugins/index.ts",
+      "require": "./dist/plugins/index.js"
+    },
+    "./theme": {
+      "types": "./dist/theme/index.d.ts",
+      "import": "./dist/theme/index.mjs",
+      "export": "./src/theme/index.ts",
+      "require": "./dist/theme/index.js"
+    },
     "./styles.layer.css": "./dist/styles.layer.css",
     "./styles.css": "./dist/styles.css",
     "./styles/*": "./dist/styles/*"
@@ -30,16 +48,16 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@types/node": "^22.8.0",
+    "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "tsup": "^8.3.4",
+    "tsup": "^8.3.5",
     "typescript": "^5.6.3"
   },
   "dependencies": {
     "@iconify/react": "^5.0.2",
-    "@mantine/core": "^7.13.4",
-    "@mantine/hooks": "^7.13.4",
+    "@mantine/core": "^7.14.0",
+    "@mantine/hooks": "^7.14.0",
     "crypto-ts": "^1.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

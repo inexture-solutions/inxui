@@ -23,7 +23,7 @@ const themeOverride: MantineThemeOverride = createTheme({
   primaryColor: THEME_PRIMARY,
   primaryShade: 7,
   cursorType: "pointer",
-  components: { ...themeComponents },
+  components: themeComponents,
 });
 
 const theme: MantineTheme = mergeMantineTheme(DEFAULT_THEME, themeOverride);
