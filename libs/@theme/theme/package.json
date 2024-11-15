@@ -24,7 +24,7 @@
   "author": "inexture",
   "devDependencies": {
     "@inexture/base": "workspace:*",
-    "tsup": "^8.3.4",
+    "tsup": "^8.3.5",
     "typescript": "^5.6.3"
   },
   "peerDependencies": {
