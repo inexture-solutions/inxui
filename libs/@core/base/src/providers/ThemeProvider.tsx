@@ -1,6 +1,12 @@
+import "@mantine/core/styles.css";
+
 import React, { FC } from "react";
-import { MantineProvider, MantineProviderProps } from "@mantine/core";
-import { theme, THEME_CONFIG } from "../config";
+import {
+  ColorSchemeScript,
+  MantineProvider,
+  MantineProviderProps,
+} from "@mantine/core";
+import { PROVIDER_CONFIG, theme } from "../config";
 
 interface ThemeProviderProps {
   children: React.ReactNode;
@@ -10,7 +16,8 @@ interface ThemeProviderProps {
 const ThemeProvider: FC<ThemeProviderProps> = ({ children, providerProps }) => {
   return (
     <div>
-      <MantineProvider {...THEME_CONFIG} theme={theme} {...providerProps}>
+      <ColorSchemeScript defaultColorScheme="dark" />
+      <MantineProvider theme={theme} {...PROVIDER_CONFIG} {...providerProps}>
         {children}
       </MantineProvider>
     </div>
