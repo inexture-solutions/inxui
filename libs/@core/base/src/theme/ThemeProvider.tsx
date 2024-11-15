@@ -3,10 +3,12 @@ import {
   MantineProvider,
   MantineThemeOverride,
   DefaultMantineColor,
+  ColorSchemeScript,
 } from "@mantine/core";
 import { useColorScheme } from "@mantine/hooks";
 import { THEME_COLORS } from "./colors";
 import { useThemeStore } from "../store/store";
+import { manager } from ".";
 
 interface ThemeProviderProps {
   children: React.ReactNode;
@@ -45,6 +47,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     <ThemeContext.Provider
       value={{ themeName, setThemeName, appMode, setAppMode }}
     >
+      <ColorSchemeScript defaultColorScheme="auto" />
       <MantineProvider
         theme={selectedTheme}
         withCssVariables
@@ -53,6 +56,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
         deduplicateCssVariables
         withGlobalClasses
         withStaticClasses
+        colorSchemeManager={manager()}
       >
         {children}
       </MantineProvider>
