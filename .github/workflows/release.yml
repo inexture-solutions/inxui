@@ -73,14 +73,28 @@ jobs:
         with:
           script: |
             const latestTag = `v${new Date().toISOString().replace(/[-:]/g, "").slice(0, 8)}`;
-            await github.rest.git.createRef({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: `refs/tags/${latestTag}`,
-              sha: context.sha,
-            });
-            core.setOutput("tag_name", latestTag);
-            console.log(`Created tag: ${latestTag}`);
+            try {
+              const existingTag = await github.rest.git.getRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `tags/${latestTag}`
+              });
+              console.log(`Tag ${latestTag} already exists.`);
+              core.setOutput("tag_name", latestTag);
+            } catch (error) {
+              if (error.status === 404) {
+                await github.rest.git.createRef({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  ref: `refs/tags/${latestTag}`,
+                  sha: context.sha,
+                });
+                core.setOutput("tag_name", latestTag);
+                console.log(`Created tag: ${latestTag}`);
+              } else {
+                throw error;
+              }
+            }
 
       - name: Create Release Branch
         id: create_branch
