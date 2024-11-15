@@ -1,6 +1,9 @@
 name: Release
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -82,12 +85,24 @@ jobs:
             // Get the short commit SHA to use in the tag
             const commitSha = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim();
 
-            // Generate the tag using the commit SHA
+            // Use the default tag naming
             const latestTag = `v${commitSha}`;
 
-            // Extract package versions
-            const workspaceInfo = JSON.parse(execSync('pnpm list --json', { encoding: 'utf8' }));
-            const packagesList = workspaceInfo.map(pkg => `- **${pkg.name}**: ${pkg.version}`).join('\n');
+            // Extract package versions from the libs directory
+            const libsPath = './libs';
+            const packages = fs.readdirSync(libsPath).map(libDir => {
+              const packageJsonPath = `${libsPath}/${libDir}/package.json`;
+              if (fs.existsSync(packageJsonPath)) {
+                const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+                return {
+                  name: packageJson.name,
+                  version: packageJson.version
+                };
+              }
+              return null;
+            }).filter(pkg => pkg !== null);
+
+            const packagesList = packages.map(pkg => `- **${pkg.name}**: ${pkg.version}`).join('\n');
 
             // Generate release notes
             const releaseNotes = `### Packages Released\n\n${packagesList}`;
@@ -107,15 +122,12 @@ jobs:
 
             // Create release.json
             const releaseData = {
-              packages: workspaceInfo.map(pkg => ({
-                name: pkg.name,
-                version: pkg.version
-              })),
+              packages,
               tag: latestTag
             };
 
             fs.writeFileSync('./release.json', JSON.stringify(releaseData, null, 2));
-            console.log('release.json file created with package versions.');
+            console.log('release.json file created with package versions from libs directory.');
 
       - name: Commit and Push release.json
         if: ${{ success() }}
