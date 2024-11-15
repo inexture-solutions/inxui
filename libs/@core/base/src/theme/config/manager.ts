@@ -34,7 +34,7 @@ export const manager = ({
       try {
         window.localStorage.setItem(key, value);
       } catch (error) {
-        throw new Error("LS Manager was unable to save color scheme.");
+        throw new Error("Manager was unable to save color scheme.");
       }
     },
 
