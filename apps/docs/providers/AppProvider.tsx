@@ -1,9 +1,10 @@
 import { FC, Fragment, ReactNode } from "react";
+import { ThemeProvider } from "@inexture/base/theme";
 
 const AppProvider: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <Fragment>
-      <div>{children}</div>
+      <ThemeProvider>{children}</ThemeProvider>
     </Fragment>
   );
 };

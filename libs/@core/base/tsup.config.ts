@@ -1,15 +1,14 @@
 import { defineConfig, Options } from "tsup";
 
 const commonConfig: Options = {
-  name: "base",
   format: ["cjs", "esm"],
   dts: true,
-  sourcemap: true,
   minify: true,
-  minifyWhitespace: true,
-  minifySyntax: true,
   clean: true,
-  splitting: true,
+  minifySyntax: true,
+  minifyWhitespace: true,
+  sourcemap: true,
+  treeshake: false,
   external: [
     "react",
     "@mantine/core",
@@ -22,9 +21,9 @@ const commonConfig: Options = {
 
 export default defineConfig([
   {
+    ...commonConfig,
     entry: ["src/index.ts"],
     outDir: "dist",
-    ...commonConfig,
   },
   {
     entry: ["src/framework/index.ts"],
@@ -32,13 +31,18 @@ export default defineConfig([
     ...commonConfig,
   },
   {
+    ...commonConfig,
     entry: ["src/plugins/index.ts"],
     outDir: "dist/plugins",
-    ...commonConfig,
   },
   {
+    ...commonConfig,
     entry: ["src/theme/index.ts"],
     outDir: "dist/theme",
-    ...commonConfig,
+    esbuildOptions(options) {
+      options.banner = {
+        js: '"use client"',
+      };
+    },
   },
 ]);
