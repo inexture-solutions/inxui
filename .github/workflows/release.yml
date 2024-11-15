@@ -110,23 +110,8 @@ jobs:
                 name: pkg.name,
                 version: pkg.version
               })),
-              tag: latestTag,
-              tag_url: release.data.html_url,
-              labels: [
-                { name: "Release", url: `${release.data.html_url}` },
-                { name: `Release ${latestTag}`, url: `${release.data.html_url}` }
-              ]
+              tag: latestTag
             };
 
             fs.writeFileSync('./release.json', JSON.stringify(releaseData, null, 2));
-            console.log('release.json file created with package versions, tag, and label links.');
-
-            // Add labels to the GitHub release
-            await github.rest.issues.addLabels({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: release.data.id,
-              labels: ["Release", `Release ${latestTag}`]
-            });
-
-            console.log(`Added labels "Release" and "Release ${latestTag}" to the release.`);
+            console.log('release.json file created with package versions.');
