@@ -71,3 +71,42 @@ jobs:
         run: pnpm run release
         env:
           NPM_TOKEN: ${{ secrets.NPM_INX_UI_TOKEN }}
+
+      - name: Create GitHub Release
+        if: ${{ success() }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { execSync } = require('child_process');
+            const fs = require('fs');
+
+            // Get release notes from changeset CLI
+            const releaseNotes = execSync('pnpm changeset version --output', { encoding: 'utf8' });
+            const latestTag = `v${new Date().toISOString().replace(/[-:]/g, "").slice(0, 8)}`;
+
+            // Create GitHub release
+            await github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: latestTag,
+              name: `Release ${latestTag}`,
+              body: releaseNotes,
+              draft: false,
+              prerelease: false,
+            });
+
+            console.log(`Created GitHub release with tag: ${latestTag}`);
+
+            // Extract package versions and create release.json
+            const workspaceInfo = JSON.parse(execSync('pnpm list --json', { encoding: 'utf8' }));
+
+            const releaseData = {
+              packages: workspaceInfo.map(pkg => ({
+                name: pkg.name,
+                version: pkg.version
+              })),
+              tag: latestTag,
+            };
+
+            fs.writeFileSync('./release.json', JSON.stringify(releaseData, null, 2));
+            console.log('release.json file created with package versions.');
