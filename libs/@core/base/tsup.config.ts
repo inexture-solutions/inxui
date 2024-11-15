@@ -1,10 +1,10 @@
 import { defineConfig, Options } from "tsup";
 
-const commonConfig: Options = {
+const config: Options = {
   format: ["cjs", "esm"],
   dts: true,
   minify: true,
-  clean: true,
+  clean: false,
   minifySyntax: true,
   minifyWhitespace: true,
   sourcemap: true,
@@ -21,22 +21,27 @@ const commonConfig: Options = {
 
 export default defineConfig([
   {
-    ...commonConfig,
+    ...config,
     entry: ["src/index.ts"],
     outDir: "dist",
   },
   {
+    ...config,
     entry: ["src/framework/index.ts"],
     outDir: "dist/framework",
-    ...commonConfig,
   },
   {
-    ...commonConfig,
+    ...config,
     entry: ["src/plugins/index.ts"],
     outDir: "dist/plugins",
   },
   {
-    ...commonConfig,
+    ...config,
+    entry: ["src/providers/index.ts"],
+    outDir: "dist/providers",
+  },
+  {
+    ...config,
     entry: ["src/theme/index.ts"],
     outDir: "dist/theme",
     esbuildOptions(options) {

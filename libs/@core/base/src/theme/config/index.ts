@@ -8,9 +8,9 @@ import { THEME_COLORS, THEME_PRIMARY } from "../colors";
 import { themeComponents } from "../components";
 import { manager } from "./manager";
 
-const THEME_CONFIG: Partial<MantineProviderProps> = {
-  classNamesPrefix: "INX",
-  colorSchemeManager: manager({ key: "system-theme" }),
+const PROVIDER_CONFIG: Partial<MantineProviderProps> = {
+  classNamesPrefix: "inx",
+  colorSchemeManager: manager({ key: "system" }),
   deduplicateCssVariables: true,
   defaultColorScheme: "auto",
   withCssVariables: true,
@@ -28,5 +28,4 @@ const themeOverride: MantineThemeOverride = createTheme({
 
 const theme: MantineTheme = mergeMantineTheme(DEFAULT_THEME, themeOverride);
 
-export { theme, THEME_COLORS, THEME_PRIMARY, THEME_CONFIG, manager };
-export type { MantineTheme, MantineProviderProps, MantineThemeOverride };
+export { theme, THEME_COLORS, THEME_PRIMARY, PROVIDER_CONFIG, manager };

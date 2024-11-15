@@ -1,11 +1,10 @@
-import { Button } from "@inexture/base/framework";
+import { Box, Button } from "@inexture/base/framework";
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>HomePage</h1>
-      <Button>Test</Button>
-    </div>
+    <Box p="lg">
+      <Button>Hello</Button>
+    </Box>
   );
 };
 

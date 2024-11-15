@@ -34,6 +34,12 @@
       "export": "./src/theme/index.ts",
       "require": "./dist/theme/index.js"
     },
+    "./providers": {
+      "types": "./dist/providers/index.d.ts",
+      "import": "./dist/providers/index.mjs",
+      "export": "./src/providers/index.ts",
+      "require": "./dist/providers/index.js"
+    },
     "./styles.layer.css": "./dist/styles.layer.css",
     "./styles.css": "./dist/styles.css",
     "./styles/*": "./dist/styles/*"
