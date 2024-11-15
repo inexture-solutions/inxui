@@ -1,10 +1,9 @@
 name: Release
 
 on:
-  push:
+  pull_request:
     branches:
       - main
-  pull_request:
     types:
       - closed
 
@@ -86,8 +85,12 @@ jobs:
             // Generate the tag using the commit SHA
             const latestTag = `v${commitSha}`;
 
-            // Get release notes from changeset CLI
-            const releaseNotes = execSync('pnpm changeset version --output', { encoding: 'utf8' });
+            // Extract package versions
+            const workspaceInfo = JSON.parse(execSync('pnpm list --json', { encoding: 'utf8' }));
+            const packagesList = workspaceInfo.map(pkg => `- **${pkg.name}**: ${pkg.version}`).join('\n');
+
+            // Generate release notes
+            const releaseNotes = `### Packages Released\n\n${packagesList}`;
 
             // Create GitHub release
             const release = await github.rest.repos.createRelease({
@@ -102,9 +105,7 @@ jobs:
 
             console.log(`Created GitHub release with tag: ${latestTag}`);
 
-            // Extract package versions and create release.json
-            const workspaceInfo = JSON.parse(execSync('pnpm list --json', { encoding: 'utf8' }));
-
+            // Create release.json
             const releaseData = {
               packages: workspaceInfo.map(pkg => ({
                 name: pkg.name,
