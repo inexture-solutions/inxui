@@ -116,3 +116,12 @@ jobs:
 
             fs.writeFileSync('./release.json', JSON.stringify(releaseData, null, 2));
             console.log('release.json file created with package versions.');
+
+      - name: Commit and Push release.json
+        if: ${{ success() }}
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add release.json
+          git commit -m "chore: add release.json for ${GITHUB_SHA}"
+          git push origin main
