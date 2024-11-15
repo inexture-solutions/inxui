@@ -110,3 +110,17 @@ jobs:
 
             fs.writeFileSync('./release.json', JSON.stringify(releaseData, null, 2));
             console.log('release.json file created with package versions.');
+
+            // Add labels to the GitHub release
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: (await github.rest.repos.getReleaseByTag({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                tag: latestTag
+              })).data.id,
+              labels: ["Release", `Release ${latestTag}`]
+            });
+
+            console.log(`Added labels "Release" and "Release ${latestTag}" to the release.`);
