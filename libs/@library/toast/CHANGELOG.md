@@ -1,5 +1,11 @@
 # @inexture/toast
 
+## 2.0.0
+
+### Minor Changes
+
+- [`18c1932`](https://github.com/inexture-solutions/inxui/commit/18c19327b1568985ec004c0aac632e8b771b4dfc) Thanks [@m4st3rai](https://github.com/m4st3rai)! - ## Auto Tagging and Publish
+
 ## 1.0.0
 
 ### Minor Changes
