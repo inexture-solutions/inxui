@@ -3,28 +3,28 @@ import type {
   MantineColorSchemeManager,
 } from "@mantine/core";
 import { isMantineColorScheme } from "@mantine/core";
+import Cookies from "js-cookie";
 
-export interface LSColorManagerOptions {
+export interface CookieColorManagerOptions {
   key?: string;
+  options?: Cookies.CookieAttributes;
 }
 
 export const manager = ({
   key = "mode",
-}: LSColorManagerOptions = {}): MantineColorSchemeManager => {
+  options = { expires: 365, path: "/" },
+}: CookieColorManagerOptions = {}): MantineColorSchemeManager => {
   let handleStorageEvent: (event: StorageEvent) => void;
 
   return {
     get: (defaultValue) => {
-      if (typeof window === "undefined") {
+      if (typeof document === "undefined") {
         return defaultValue;
       }
 
       try {
-        return (
-          // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- Not needed
-          (window.localStorage.getItem(key) as MantineColorScheme) ||
-          defaultValue
-        );
+        const value = Cookies.get(key);
+        return (value as MantineColorScheme) || defaultValue;
       } catch {
         return defaultValue;
       }
@@ -32,9 +32,9 @@ export const manager = ({
 
     set: (value) => {
       try {
-        window.localStorage.setItem(key, value);
+        Cookies.set(key, value, options);
       } catch (error) {
-        throw new Error("Manager was unable to save color scheme.");
+        throw new Error("Manager was unable to save color scheme in cookies.");
       }
     },
 
@@ -53,7 +53,7 @@ export const manager = ({
     },
 
     clear: () => {
-      window.localStorage.removeItem(key);
+      Cookies.remove(key, options);
     },
   };
 };

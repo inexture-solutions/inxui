@@ -17,6 +17,7 @@ const ToggleMode: React.FC = () => {
       onClick={() =>
         setColorScheme(computedColorScheme === "light" ? "dark" : "light")
       }
+      size="xl"
       variant="default"
       aria-label="Toggle Mode"
     >
