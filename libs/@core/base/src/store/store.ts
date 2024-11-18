@@ -95,9 +95,9 @@
 //     )
 //   );
 
-import { create, UseBoundStore, StoreApi } from "zustand";
-import { persist, createJSONStorage, StateStorage } from "zustand/middleware";
-import { THEME_COLORS } from "../theme/colors";
+import { create, StoreApi, UseBoundStore } from "zustand";
+import { createJSONStorage, persist, StateStorage } from "zustand/middleware";
+import { THEME_COLORS } from "../components/colors";
 
 type ThemeStore = {
   themeName: keyof typeof THEME_COLORS;
@@ -137,6 +137,6 @@ export const useThemeStore: UseBoundStore<StoreApi<ThemeStore>> =
       {
         name: "theme",
         storage: createJSONStorage(() => encodedStorage),
-      }
-    )
+      },
+    ),
   );

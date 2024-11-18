@@ -17,6 +17,11 @@ const config: Options = {
     "@iconify/react",
     "crypto-ts",
   ],
+  esbuildOptions(options) {
+    options.banner = {
+      js: '"use client"',
+    };
+  },
 };
 
 export default defineConfig([
@@ -24,11 +29,6 @@ export default defineConfig([
     ...config,
     entry: ["src/index.ts"],
     outDir: "dist",
-  },
-  {
-    ...config,
-    entry: ["src/framework/index.ts"],
-    outDir: "dist/framework",
   },
   {
     ...config,
@@ -44,10 +44,5 @@ export default defineConfig([
     ...config,
     entry: ["src/theme/index.ts"],
     outDir: "dist/theme",
-    esbuildOptions(options) {
-      options.banner = {
-        js: '"use client"',
-      };
-    },
   },
 ]);

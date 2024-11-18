@@ -1,4 +1,4 @@
-import { Box, Button } from "@inexture/base/framework";
+import { Box, Button } from "@inexture/base";
 
 const HomePage = () => {
   return (

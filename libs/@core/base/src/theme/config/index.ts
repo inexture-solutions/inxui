@@ -4,9 +4,9 @@ import type {
   MantineThemeOverride,
 } from "@mantine/core";
 import { createTheme, DEFAULT_THEME, mergeMantineTheme } from "@mantine/core";
-import { THEME_COLORS, THEME_PRIMARY } from "../colors";
-import { themeComponents } from "../components";
+import { THEME_COLORS, THEME_PRIMARY } from "../../components/colors";
 import { manager } from "./manager";
+import { themeComponents } from "../../components";
 
 const PROVIDER_CONFIG: Partial<MantineProviderProps> = {
   classNamesPrefix: "inx",

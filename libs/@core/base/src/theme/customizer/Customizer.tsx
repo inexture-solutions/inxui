@@ -100,18 +100,18 @@
 // }
 import React from "react";
 import {
-  Drawer,
+  Box,
   Button,
+  Center,
+  CheckIcon,
   ColorSwatch,
+  Drawer,
+  Group,
+  SegmentedControl,
   Stack,
   Text,
-  Group,
-  Box,
-  SegmentedControl,
-  CheckIcon,
-  Center,
 } from "@mantine/core";
-import { THEME_COLORS } from "../colors";
+import { THEME_COLORS } from "../../components/colors";
 import { useThemeStore } from "../../store/store";
 import { Icon } from "@iconify/react";
 

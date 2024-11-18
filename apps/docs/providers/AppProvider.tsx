@@ -1,12 +1,15 @@
+"use client";
+
 import { FC, Fragment, ReactNode } from "react";
 import { ThemeProvider } from "@inexture/base/providers";
-// import { ColorSchemeScript } from "@inexture/base/framework";
+import { manager } from "@inexture/base/theme";
 
 const AppProvider: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <Fragment>
-      {/*<ColorSchemeScript defaultColorScheme="auto" />*/}
-      <ThemeProvider>{children}</ThemeProvider>
+      <ThemeProvider colorSchemeManager={manager({ key: "apple" })}>
+        {children}
+      </ThemeProvider>
     </Fragment>
   );
 };

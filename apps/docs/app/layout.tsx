@@ -6,7 +6,7 @@ const RootLayout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => (
-  <html lang="en">
+  <html lang="en" data-mantine-color-scheme="dark">
     <body>
       <AppProvider>{children}</AppProvider>
     </body>
