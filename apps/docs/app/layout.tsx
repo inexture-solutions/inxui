@@ -1,3 +1,4 @@
+import "@inexture/base/styles.layer.css";
 import React from "react";
 import AppProvider from "@/providers/AppProvider";
 
@@ -6,7 +7,7 @@ const RootLayout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => (
-  <html lang="en" data-mantine-color-scheme="dark">
+  <html lang="en">
     <body>
       <AppProvider>{children}</AppProvider>
     </body>

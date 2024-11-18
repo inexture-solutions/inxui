@@ -34,6 +34,12 @@
       "export": "./src/providers/index.ts",
       "require": "./dist/providers/index.js"
     },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.mjs",
+      "export": "./src/utils/index.ts",
+      "require": "./dist/utils/index.js"
+    },
     "./styles.layer.css": "./dist/styles.layer.css",
     "./styles.css": "./dist/styles.css",
     "./styles/*": "./dist/styles/*"
@@ -51,6 +57,7 @@
     "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "crypto-ts": "^1.0.2",
     "tsup": "^8.3.5",
     "typescript": "^5.6.3"
   },
@@ -58,7 +65,6 @@
     "@iconify/react": "^5.0.2",
     "@mantine/core": "^7.14.0",
     "@mantine/hooks": "^7.14.0",
-    "crypto-ts": "^1.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "shx": "^0.3.4",
