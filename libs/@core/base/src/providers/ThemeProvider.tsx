@@ -1,20 +1,17 @@
 import "@mantine/core/styles.layer.css";
-
-import React, { FC, Fragment } from "react";
 import { MantineProvider, MantineProviderProps } from "@mantine/core";
 import { PROVIDER_CONFIG, theme } from "../theme";
+import React from "react";
 
 interface ThemeProviderProps extends MantineProviderProps {
   children: React.ReactNode;
 }
 
-const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
+const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   return (
-    <Fragment>
-      <MantineProvider {...PROVIDER_CONFIG} theme={theme}>
-        {children}
-      </MantineProvider>
-    </Fragment>
+    <MantineProvider {...PROVIDER_CONFIG} theme={theme}>
+      {children}
+    </MantineProvider>
   );
 };
 

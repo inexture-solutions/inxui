@@ -3,7 +3,10 @@ import {
   type MantineColorsTuple,
 } from "@mantine/core";
 
-export const THEME_PRIMARY = "primary" as const;
+export enum THEME_NAME {
+  PRIMARY = "primary",
+}
+
 export const THEME_COLORS: Partial<
   Record<DefaultMantineColor, MantineColorsTuple>
 > = {
