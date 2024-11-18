@@ -1,6 +1,8 @@
 import React from "react";
-import AppProvider from "@/providers/AppProvider";
 import { cookies } from "next/headers";
+import { ThemeProvider } from "@inexture/base/providers";
+import MasterLayout from "@/layouts/MasterLayout";
+import "@/assets/css/style.css";
 
 const RootLayout = async ({
   children,
@@ -16,7 +18,9 @@ const RootLayout = async ({
       data-mantine-color-scheme={mode?.value === "dark" ? "dark" : "light"}
     >
       <body>
-        <AppProvider>{children}</AppProvider>
+        <ThemeProvider>
+          <MasterLayout>{children}</MasterLayout>
+        </ThemeProvider>
       </body>
     </html>
   );
