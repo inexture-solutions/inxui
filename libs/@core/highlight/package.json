@@ -36,7 +36,7 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "@mantine/code-highlight": "^7.14.0",
+    "@mantine/code-highlight": "^7.14.1",
     "react-dom": "^18.3.1",
     "react": "^18.3.1",
     "shx": "^0.3.4"
