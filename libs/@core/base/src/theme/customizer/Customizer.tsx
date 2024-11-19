@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   ActionIcon,
   Box,
@@ -12,12 +12,12 @@ import { useDisclosure } from "@mantine/hooks";
 import { Icon } from "../../plugins";
 import { ToggleMode } from "../../utils";
 import AvailableColors from "./components/AvailableColors";
+import withThemeProvider from "./CustomizerProvider.tsx";
 
-export const ThemeCustomizer: React.FC = () => {
+const ThemeCustomizerComp: React.FC = () => {
   const [opened, { open, close }] = useDisclosure(false);
-
   return (
-    <>
+    <Fragment>
       <ActionIcon variant="default" onClick={open} size="xl">
         <Icon icon="weui:setting-outlined" width={20} />
       </ActionIcon>
@@ -57,6 +57,10 @@ export const ThemeCustomizer: React.FC = () => {
           </Box>
         </Stack>
       </Drawer>
-    </>
+    </Fragment>
   );
 };
+
+ThemeCustomizerComp.displayName = "ThemeCustomizer";
+const ThemeCustomizer = withThemeProvider(ThemeCustomizerComp);
+export { ThemeCustomizer };

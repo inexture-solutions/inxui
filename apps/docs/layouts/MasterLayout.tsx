@@ -1,7 +1,7 @@
 import { FC, ReactNode } from "react";
 import { AppShell, AppShellHeader, AppShellMain } from "@inexture/base";
-import Header from "@/components/common/header/Header";
 import { ThemeProvider } from "@inexture/base/providers";
+import Header from "@/components/common/header/Header";
 
 const MasterLayout: FC<{ children: ReactNode }> = ({ children }) => {
   return (

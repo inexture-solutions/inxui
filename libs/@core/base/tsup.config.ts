@@ -8,8 +8,6 @@ const config: Options = {
   minifySyntax: true,
   minifyWhitespace: true,
   sourcemap: true,
-  cjsInterop: true,
-  splitting: true,
   minifyIdentifiers: true,
   bundle: true,
   treeshake: false,
