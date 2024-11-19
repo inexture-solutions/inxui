@@ -71,32 +71,6 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_INX_UI_TOKEN }}
 
-      - name: Add release.json to Each Built Package
-        if: ${{ success() }}
-        run: |
-          echo "Adding release.json to built packages."
-          BUILD_DIRS=$(pnpm turbo run build --dry-run --filter=...[HEAD^1] | grep "output:" | awk '{print $2}')
-          for dir in $BUILD_DIRS; do
-            PACKAGE_JSON="$dir/package.json"
-            if [ -f "$PACKAGE_JSON" ]; then
-              PACKAGE_NAME=$(jq -r .name "$PACKAGE_JSON")
-              PACKAGE_VERSION=$(jq -r .version "$PACKAGE_JSON")
-              COMMIT_HASH=$(git rev-parse --short HEAD)
-
-              echo "Creating release.json for $PACKAGE_NAME@$PACKAGE_VERSION"
-              echo "{\"name\": \"$PACKAGE_NAME\", \"version\": \"$PACKAGE_VERSION\", \"commit\": \"$COMMIT_HASH\"}" > "$dir/release.json"
-            fi
-          done
-
-      - name: Commit and Push release.json Files
-        if: ${{ success() }}
-        run: |
-          git config user.name "m4st3rai"
-          git config user.email "developer@inexture.com"
-          git add */release.json
-          git commit -m "chore: add release.json for built packages"
-          git push origin main
-
       - name: Create GitHub Release
         if: ${{ success() }}
         uses: actions/github-script@v6
