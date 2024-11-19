@@ -1,6 +1,6 @@
 {
   "name": "@inexture/carousel",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css"
