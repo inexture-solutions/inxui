@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import {
   ActionIcon,
+  ActionIconProps,
   Box,
   Divider,
   Drawer,
@@ -14,12 +15,12 @@ import { ToggleMode } from "../../utils";
 import AvailableColors from "./components/AvailableColors";
 import withThemeProvider from "./CustomizerProvider.tsx";
 
-const ThemeCustomizerComp: React.FC = () => {
+const ThemeCustomizerComp: React.FC<ActionIconProps> = (props) => {
   const [opened, { open, close }] = useDisclosure(false);
   return (
     <Fragment>
-      <ActionIcon variant="default" onClick={open} size="xl">
-        <Icon icon="weui:setting-outlined" width={20} />
+      <ActionIcon variant="default" onClick={open} size="md" {...props}>
+        <Icon icon="weui:setting-outlined" fontSize={18} />
       </ActionIcon>
       <Drawer
         position="right"
