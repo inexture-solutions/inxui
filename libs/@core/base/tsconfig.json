@@ -11,13 +11,11 @@
       "dom"
     ],
     "jsx": "preserve",
-    "declaration": true,
-    "declarationMap": true,
-    "emitDeclarationOnly": true,
     "module": "ES2020",
     "moduleResolution":"Bundler",
-    "allowImportingTsExtensions": true,
-    "esModuleInterop": true
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true
   },
   "exclude": [
     "dist",

@@ -4,15 +4,13 @@ import type {
   MantineThemeOverride,
 } from "@mantine/core";
 import { createTheme, DEFAULT_THEME, mergeMantineTheme } from "@mantine/core";
-import { THEME_COLORS, THEME_PRIMARY } from "../colors";
-import { themeComponents } from "../components";
+import { THEME_COLORS, THEME_NAME } from "../../components/colors";
 import { manager } from "./manager";
 
 const PROVIDER_CONFIG: Partial<MantineProviderProps> = {
   classNamesPrefix: "inx",
-  colorSchemeManager: manager({ key: "system" }),
+  colorSchemeManager: manager(),
   deduplicateCssVariables: true,
-  defaultColorScheme: "auto",
   withCssVariables: true,
   withGlobalClasses: true,
   withStaticClasses: true,
@@ -20,12 +18,12 @@ const PROVIDER_CONFIG: Partial<MantineProviderProps> = {
 
 const themeOverride: MantineThemeOverride = createTheme({
   colors: THEME_COLORS,
-  primaryColor: THEME_PRIMARY,
+  primaryColor: THEME_NAME.PRIMARY,
   primaryShade: 7,
   cursorType: "pointer",
-  components: themeComponents,
+  // components: themeComponents,
 });
 
 const theme: MantineTheme = mergeMantineTheme(DEFAULT_THEME, themeOverride);
 
-export { theme, THEME_COLORS, THEME_PRIMARY, PROVIDER_CONFIG, manager };
+export { theme, PROVIDER_CONFIG, manager };

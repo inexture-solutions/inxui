@@ -1,19 +1,16 @@
-import "@mantine/core/styles.css";
+import React from "react";
+import "@mantine/core/styles.layer.css";
+import { MantineProviderProps } from "@mantine/core";
+import withThemeProvider from "../theme/customizer/CustomizerProvider.tsx";
 
-import React, { FC } from "react";
-import { MantineProvider } from "@mantine/core";
-
-interface ThemeProviderProps {
+interface ThemeProviderProps extends MantineProviderProps {
   children: React.ReactNode;
 }
 
-const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
-  return (
-    <>
-      <MantineProvider>{children}</MantineProvider>
-    </>
-  );
+const ThemeProviderComp: React.FC<ThemeProviderProps> = ({ children }) => {
+  return children;
 };
 
-ThemeProvider.displayName = "ThemeProvider";
+ThemeProviderComp.displayName = "ThemeProvider";
+const ThemeProvider = withThemeProvider(ThemeProviderComp);
 export { ThemeProvider };
