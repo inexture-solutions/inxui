@@ -6,7 +6,6 @@ const HomePage = () => {
       <Paper withBorder>
         <Box p="md" ta="center">
           <h1>Playground</h1>
-
           <Button>Themed Button</Button>
         </Box>
       </Paper>

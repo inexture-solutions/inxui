@@ -6,7 +6,7 @@ import {
   Drawer,
   Flex,
   Stack,
-  Text
+  Text,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { Icon } from "../../plugins";

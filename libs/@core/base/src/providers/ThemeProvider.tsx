@@ -1,7 +1,7 @@
+import React from "react";
 import "@mantine/core/styles.layer.css";
 import { MantineProvider, MantineProviderProps } from "@mantine/core";
 import { PROVIDER_CONFIG, theme } from "../theme";
-import React from "react";
 
 interface ThemeProviderProps extends MantineProviderProps {
   children: React.ReactNode;
@@ -16,4 +16,5 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 };
 
 ThemeProvider.displayName = "ThemeProvider";
+
 export { ThemeProvider };

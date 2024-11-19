@@ -1,16 +1,13 @@
-import { Box, ColorSwatch, Grid, Text } from "@mantine/core";
 import React from "react";
+import { Box, ColorSwatch, Grid, Text } from "@mantine/core";
+import { Icon } from "@iconify/react";
 import { THEME_COLORS } from "../../../components/colors";
-import { theme } from "../../index.ts";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import { useThemeStore } from "../../../store/store.ts";
+import { useThemeStore } from "../../../store";
 
 const AvailableColors: React.FC = () => {
-  const { active, setActive, setColors } = useThemeStore();
-
-  const handleChange = (colorName, colorArray) => {
+  const { active, setActive } = useThemeStore();
+  const handleChange = (colorName: string) => {
     setActive(colorName);
-    setColors(colorArray);
   };
 
   return (
@@ -24,8 +21,8 @@ const AvailableColors: React.FC = () => {
             <Grid.Col span={2} key={colorName}>
               <ColorSwatch
                 key={colorName}
-                color={colorArray[theme.primaryShade as number]}
-                onClick={() => handleChange(colorName, colorArray)}
+                color={colorArray[7]}
+                onClick={() => handleChange(colorName)}
                 radius="sm"
                 style={{ cursor: "pointer", width: "100%", height: 40 }}
               >
