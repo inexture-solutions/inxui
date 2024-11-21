@@ -5,5 +5,20 @@ export const themeDrawer: Partial<MantineThemeComponents> = {
     defaultProps: {
       size: "xs",
     },
+    styles: (theme) => {
+      const { shadow } = theme.other.customTheme || {};
+      return {
+        root: {
+          boxShadow: shadow ? theme.shadows[shadow] : undefined,
+          border: "none",
+          inner: {
+            border: "none",
+          },
+        },
+        overlay: {
+          border: "none",
+        },
+      };
+    },
   }),
 };
