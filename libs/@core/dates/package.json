@@ -1,6 +1,6 @@
 {
   "name": "@inexture/dates",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css"
@@ -35,7 +35,7 @@
     "tsup": "^8.3.5"
   },
   "dependencies": {
-    "@mantine/dates": "^7.14.0",
+    "@mantine/dates": "^7.14.1",
     "dayjs": "^1.11.13",
     "react-dom": "^18.3.1",
     "react": "^18.3.1",

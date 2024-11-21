@@ -65,6 +65,7 @@
 import React, { Fragment } from "react";
 import {
   ActionIcon,
+  ActionIconProps,
   Box,
   ColorSwatch,
   Divider,
@@ -87,7 +88,7 @@ import { THEME_COLORS } from "../../components/colors";
 import withThemeProvider from "./CustomizerProvider";
 import { theme } from "../../theme/index";
 
-const ThemeCustomizerComp: React.FC = () => {
+const ThemeCustomizerComp: React.FC<ActionIconProps> = (props) => {
   const [opened, { open, close }] = useDisclosure(false);
   const {
     active,
@@ -102,8 +103,8 @@ const ThemeCustomizerComp: React.FC = () => {
 
   return (
     <Fragment>
-      <ActionIcon variant="default" onClick={open} size="xl">
-        <Icon icon="weui:setting-outlined" width={20} />
+      <ActionIcon variant="default" onClick={open} size="md" {...props}>
+        <Icon icon="weui:setting-outlined" fontSize={18} />
       </ActionIcon>
       <Drawer
         position="right"

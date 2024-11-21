@@ -1,6 +1,6 @@
 {
   "name": "@inexture/base",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css",
@@ -64,8 +64,8 @@
   },
   "dependencies": {
     "@iconify/react": "^5.0.2",
-    "@mantine/core": "^7.14.0",
-    "@mantine/hooks": "^7.14.0",
+    "@mantine/core": "^7.14.1",
+    "@mantine/hooks": "^7.14.1",
     "js-cookie": "^3.0.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
