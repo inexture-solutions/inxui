@@ -1,6 +1,6 @@
 {
   "name": "@inexture/dates",
-  "version": "3.0.0",
+  "version": "5.0.0",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css"
@@ -29,18 +29,18 @@
   },
   "devDependencies": {
     "@inexture/base": "workspace:*",
-    "@types/node": "^22.9.0",
+    "@types/node": "^22.9.3",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "tsup": "^8.3.5"
   },
   "dependencies": {
-    "@mantine/dates": "^7.14.1",
+    "@mantine/dates": "^7.14.2",
     "dayjs": "^1.11.13",
     "react-dom": "^18.3.1",
     "react": "^18.3.1",
     "shx": "^0.3.4",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
   "peerDependencies": {
     "@inexture/base": "*"

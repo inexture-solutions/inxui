@@ -1,6 +1,6 @@
 {
   "name": "@inexture/base",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css",
@@ -55,17 +55,17 @@
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.6",
-    "@types/node": "^22.9.0",
+    "@types/node": "^22.9.3",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "crypto-ts": "^1.0.2",
     "tsup": "^8.3.5",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
   "dependencies": {
     "@iconify/react": "^5.0.2",
-    "@mantine/core": "^7.14.1",
-    "@mantine/hooks": "^7.14.1",
+    "@mantine/core": "^7.14.2",
+    "@mantine/hooks": "^7.14.2",
     "js-cookie": "^3.0.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
