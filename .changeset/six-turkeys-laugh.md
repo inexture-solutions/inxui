@@ -9,7 +9,6 @@
 "@inexture/modals": minor
 "@inexture/tiptap": minor
 "@inexture/api": minor
-"@inexture/theme": minor
 "@inexture/dates": minor
 "@inexture/base": minor
 ---
