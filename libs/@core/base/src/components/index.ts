@@ -8,6 +8,9 @@ import { themeTable } from "./table/theme-table.ts";
 import { themeTooltip } from "./tooltip/theme-tooltip.ts";
 import { themeOverlay } from "./overlay/theme-overlay.ts";
 import { themeSwitch } from "./switch/theme-switch.ts";
+import { themePaper } from "./paper/theme-paper.ts";
+import { themeCard } from "./card/theme-card.ts";
+import { themePopover } from "./popover/theme-popover.ts";
 
 export const themeComponents: Partial<MantineThemeComponents> = {
   ...themeButton,
@@ -19,4 +22,7 @@ export const themeComponents: Partial<MantineThemeComponents> = {
   ...themeTooltip,
   ...themeOverlay,
   ...themeSwitch,
+  ...themePaper,
+  ...themeCard,
+  ...themePopover,
 };

@@ -1,17 +1,22 @@
 import React from "react";
-import { useThemeStore } from "../../store";
-import { PROVIDER_CONFIG, theme } from "../config";
 import { MantineProvider } from "@mantine/core";
+import { PROVIDER_CONFIG, theme } from "../config";
+import { useCurrentTheme } from "./useCurrentTheme";
 
 const withThemeProvider = <P extends object>(
-  Component: React.ComponentType<P>,
+  Component: React.ComponentType<P>
 ): React.FC<P> => {
   const WithTheme: React.FC<P> = (props) => {
-    const { active } = useThemeStore();
+    const { currentTheme } = useCurrentTheme();
+
     return (
       <MantineProvider
         {...PROVIDER_CONFIG}
-        theme={{ ...theme, primaryColor: active }}
+        theme={{
+          ...theme,
+          primaryColor: currentTheme.primaryColor,
+          defaultRadius: currentTheme.defaultRadius,
+        }}
       >
         <Component {...props} />
       </MantineProvider>

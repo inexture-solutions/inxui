@@ -3,20 +3,52 @@ import {
   ActionIcon,
   ActionIconProps,
   Box,
+  ColorSwatch,
   Divider,
   Drawer,
   Flex,
+  Grid,
   Stack,
   Text,
+  Select,
+  MantineRadius,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { Icon } from "../../plugins";
+import { Icon } from "@iconify/react";
 import { ToggleMode } from "../../utils";
-import AvailableColors from "./components/AvailableColors";
-import withThemeProvider from "./CustomizerProvider.tsx";
+import withThemeProvider from "./CustomizerProvider";
+import { useThemeStore } from "../../store";
+import { useCurrentTheme } from "./useCurrentTheme";
 
 const ThemeCustomizerComp: React.FC<ActionIconProps> = (props) => {
   const [opened, { open, close }] = useDisclosure(false);
+  const { themeName, setTheme } = useThemeStore();
+  const { updateTheme } = useCurrentTheme();
+
+  const updateThemeColor = (colorName: string) => {
+    setTheme((currentTheme) => {
+      return {
+        ...currentTheme,
+        primaryColor: colorName,
+      };
+    });
+    updateTheme((prevTheme) => ({
+      ...prevTheme,
+      primaryColor: colorName,
+    }));
+  };
+
+  const updateThemeRadius = (radius: MantineRadius) => {
+    setTheme((currentTheme) => ({
+      ...currentTheme,
+      defaultRadius: radius,
+    }));
+    updateTheme((prevTheme) => ({
+      ...prevTheme,
+      defaultRadius: radius,
+    }));
+  };
+
   return (
     <Fragment>
       <ActionIcon variant="default" onClick={open} size="md" {...props}>
@@ -34,11 +66,11 @@ const ThemeCustomizerComp: React.FC<ActionIconProps> = (props) => {
         }
         styles={{
           title: {
-            fontSize: "var(--mantine-font-size-xl)",
+            fontSize: themeName.fontSizes.xl,
             fontWeight: "bold",
           },
           header: {
-            boxShadow: "var(--mantine-shadow-sm)",
+            boxShadow: themeName.shadows.sm,
           },
           body: {
             padding: 0,
@@ -53,8 +85,44 @@ const ThemeCustomizerComp: React.FC<ActionIconProps> = (props) => {
             <ToggleMode />
           </Flex>
           <Divider />
-          <Box>
-            <AvailableColors />
+          <Box p="sm">
+            <Text fw="bold" fz="md" mb="xs">
+              Colors
+            </Text>
+            <Grid gutter="xs">
+              {Object.entries(themeName.colors).map(
+                ([colorName, colorArray]) => (
+                  <Grid.Col span={2} key={colorName}>
+                    <ColorSwatch
+                      color={colorArray[7]}
+                      onClick={() => updateThemeColor(colorName)}
+                      radius="sm"
+                      style={{ cursor: "pointer", width: "100%", height: 40 }}
+                    >
+                      {themeName.primaryColor === colorName && (
+                        <Box c={colorArray[3]}>
+                          <Icon width={20} icon="tdesign:check-circle-filled" />
+                        </Box>
+                      )}
+                    </ColorSwatch>
+                  </Grid.Col>
+                )
+              )}
+            </Grid>
+          </Box>
+          <Divider />
+          <Box p="sm">
+            <Text fw="bold" fz="md" mb="xs">
+              Radius
+            </Text>
+            <Select
+              value={themeName.defaultRadius as any}
+              onChange={(value) => updateThemeRadius(value as MantineRadius)}
+              data={Object.keys(themeName.radius).map((key) => ({
+                value: key,
+                label: key.charAt(0).toUpperCase() + key.slice(1),
+              }))}
+            />
           </Box>
         </Stack>
       </Drawer>

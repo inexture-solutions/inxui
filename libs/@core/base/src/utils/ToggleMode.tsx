@@ -1,13 +1,12 @@
 import React from "react";
 import {
   ActionIcon,
-  ActionIconProps,
   useComputedColorScheme,
   useMantineColorScheme,
 } from "@mantine/core";
 import { Icon } from "@iconify/react";
 
-const ToggleMode: React.FC<ActionIconProps> = (props) => {
+const ToggleMode: React.FC = () => {
   const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme("light", {
     getInitialValueInEffect: true,
@@ -18,12 +17,11 @@ const ToggleMode: React.FC<ActionIconProps> = (props) => {
       onClick={() =>
         setColorScheme(computedColorScheme === "light" ? "dark" : "light")
       }
-      size="md"
+      size="xs"
       variant="default"
       aria-label="Toggle Mode"
-      {...props}
     >
-      <Icon fontSize={18} icon="pepicons-print:sun" />
+      <Icon fontSize={20} icon="pepicons-print:sun" />
     </ActionIcon>
   );
 };

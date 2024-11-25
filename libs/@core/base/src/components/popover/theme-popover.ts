@@ -1,29 +1,18 @@
-import { ActionIcon, Button, type MantineThemeComponents } from "@mantine/core";
+import { MantineThemeComponents, Popover } from "@mantine/core";
 
-export const themeButton: Partial<MantineThemeComponents> = {
-  Button: Button.extend({
-    defaultProps: {
-      size: "md",
-      variant: "filled",
-    },
+export const themePopover: Partial<MantineThemeComponents> = {
+  Popover: Popover.extend({
     styles: (theme) => {
       const { shadow, borderWidth, radius, active } =
         theme.other.customTheme || {};
       return {
-        root: {
+        dropdown: {
           boxShadow: shadow ? theme.shadows[shadow] : undefined,
           border: borderWidth
             ? `${borderWidth}px solid ${theme.colors[active][theme.primaryShade as number]}`
             : undefined,
           borderRadius: radius ? theme.radius[radius] : undefined,
         },
-      };
-    },
-  }),
-  ActionIcon: ActionIcon.extend({
-    vars: () => {
-      return {
-        root: {},
       };
     },
   }),

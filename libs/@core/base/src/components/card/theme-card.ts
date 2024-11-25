@@ -1,11 +1,7 @@
-import { ActionIcon, Button, type MantineThemeComponents } from "@mantine/core";
+import { Card, MantineThemeComponents } from "@mantine/core";
 
-export const themeButton: Partial<MantineThemeComponents> = {
-  Button: Button.extend({
-    defaultProps: {
-      size: "md",
-      variant: "filled",
-    },
+export const themeCard: Partial<MantineThemeComponents> = {
+  Card: Card.extend({
     styles: (theme) => {
       const { shadow, borderWidth, radius, active } =
         theme.other.customTheme || {};
@@ -17,13 +13,6 @@ export const themeButton: Partial<MantineThemeComponents> = {
             : undefined,
           borderRadius: radius ? theme.radius[radius] : undefined,
         },
-      };
-    },
-  }),
-  ActionIcon: ActionIcon.extend({
-    vars: () => {
-      return {
-        root: {},
       };
     },
   }),

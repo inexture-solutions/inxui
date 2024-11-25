@@ -1,4 +1,3 @@
-import React from "react";
 import { Text } from "@inexture/base";
 import Link from "next/link";
 
@@ -10,7 +9,7 @@ const Logo = () => {
         fz={35}
         fw="bold"
         variant="gradient"
-        gradient={{ from: "teal", to: "orange", deg: 180 }}
+        gradient={{ from: "pink", to: "orange", deg: 45 }}
       >
         INXUI
       </Text>
