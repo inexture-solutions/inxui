@@ -1,6 +1,6 @@
 {
   "name": "@inexture/base",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css",

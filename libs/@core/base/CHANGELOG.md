@@ -1,5 +1,17 @@
 # @inexture/base
 
+## 6.0.0
+
+### Major Changes
+
+- [#34](https://github.com/inexture-solutions/inxui/pull/34) [`3832491`](https://github.com/inexture-solutions/inxui/commit/383249199986297c3629b13d25f8ee6f2b051d65) Thanks [@m4st3rai](https://github.com/m4st3rai)! - - Workflow updated
+  - Theme Package removed
+  - All internal pacakges upgraded
+
+### Minor Changes
+
+- [#35](https://github.com/inexture-solutions/inxui/pull/35) [`1658c1d`](https://github.com/inexture-solutions/inxui/commit/1658c1d5d6d029f428af5282e32275fc9f72c70e) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Added auto contrast in theme customizer
+
 ## 2.0.0
 
 ### Minor Changes
