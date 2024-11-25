@@ -1,5 +1,4 @@
 ---
-"@inexture/theme": major
 "@inexture/base": major
 ---
 
