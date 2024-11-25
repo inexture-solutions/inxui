@@ -53,7 +53,7 @@ jobs:
 
       - name: Run Release Script
         id: changesets
-        uses: changesets/action@v2
+        uses: changesets/action@v1
         with:
           publish: pnpm run release
         env:
