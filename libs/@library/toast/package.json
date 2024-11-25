@@ -1,7 +1,7 @@
 {
   "name": "@inexture/toast",
   "description": "A simple yet elegant toast notification system",
-  "version": "3.0.0",
+  "version": "5.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -23,7 +23,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tsup": "^8.3.5",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
   "dependencies": {
     "sonner": "^1.7.0"

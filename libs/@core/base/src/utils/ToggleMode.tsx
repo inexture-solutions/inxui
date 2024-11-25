@@ -17,11 +17,11 @@ const ToggleMode: React.FC = () => {
       onClick={() =>
         setColorScheme(computedColorScheme === "light" ? "dark" : "light")
       }
-      size="xs"
+      size="md"
       variant="default"
       aria-label="Toggle Mode"
     >
-      <Icon fontSize={20} icon="pepicons-print:sun" />
+      <Icon fontSize={16} icon="pepicons-print:sun" />
     </ActionIcon>
   );
 };
