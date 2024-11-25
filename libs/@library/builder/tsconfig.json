@@ -1,0 +1,19 @@
+{
+  "include": [
+    ".",
+    "src/**/*.ts"
+  ],
+  "compilerOptions": {
+    "jsx": "preserve",
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "module": "ESNext",
+    "moduleResolution":"Bundler",
+  },
+  "exclude": [
+    "dist",
+    "build",
+    "node_modules"
+  ]
+}
