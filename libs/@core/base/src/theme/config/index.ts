@@ -6,7 +6,6 @@ import type {
 import { createTheme, DEFAULT_THEME, mergeMantineTheme } from "@mantine/core";
 import { THEME_COLORS, THEME_NAME } from "../../components/colors";
 import { manager } from "./manager";
-import { themeComponents } from "../../components/index";
 
 const PROVIDER_CONFIG: Partial<MantineProviderProps> = {
   classNamesPrefix: "inx",
@@ -22,7 +21,7 @@ const themeOverride: MantineThemeOverride = createTheme({
   primaryColor: THEME_NAME.PRIMARY,
   primaryShade: 7,
   cursorType: "pointer",
-  components: themeComponents,
+  // components: themeComponents,
 });
 
 const theme: MantineTheme = mergeMantineTheme(DEFAULT_THEME, themeOverride);
