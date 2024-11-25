@@ -13,7 +13,7 @@ export const useCurrentTheme = () => {
   }, [themeName]);
 
   return {
-    currentTheme, // The current theme
-    updateTheme: setTheme, // Function to update the theme
+    currentTheme,
+    updateTheme: setTheme,
   };
 };
