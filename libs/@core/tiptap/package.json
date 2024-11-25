@@ -1,6 +1,6 @@
 {
   "name": "@inexture/tiptap",
-  "version": "3.0.0",
+  "version": "5.0.0",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css"
@@ -29,18 +29,18 @@
   },
   "devDependencies": {
     "@inexture/base": "workspace:*",
-    "@types/node": "^22.9.0",
+    "@types/node": "^22.9.3",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "tsup": "^8.3.5",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@mantine/tiptap": "^7.14.1",
-    "@tiptap/extension-underline": "^2.9.1",
-    "@tiptap/pm": "^2.9.1",
-    "@tiptap/react": "^2.9.1",
-    "@tiptap/starter-kit": "^2.9.1",
+    "@mantine/tiptap": "^7.14.2",
+    "@tiptap/extension-underline": "^2.10.2",
+    "@tiptap/pm": "^2.10.2",
+    "@tiptap/react": "^2.10.2",
+    "@tiptap/starter-kit": "^2.10.2",
     "react": "^18.3.1",
     "shx": "^0.3.4"
   },
