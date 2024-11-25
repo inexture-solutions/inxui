@@ -12,6 +12,7 @@ import {
   Text,
   Select,
   MantineRadius,
+  Switch,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { Icon } from "@iconify/react";
@@ -46,6 +47,16 @@ const ThemeCustomizerComp: React.FC<ActionIconProps> = (props) => {
     updateTheme((prevTheme) => ({
       ...prevTheme,
       defaultRadius: radius,
+    }));
+  };
+
+  const handleAutoContrastChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const newValue = event.currentTarget.checked;
+    setTheme((currentTheme) => ({
+      ...currentTheme,
+      autoContrast: newValue,
     }));
   };
 
@@ -116,14 +127,28 @@ const ThemeCustomizerComp: React.FC<ActionIconProps> = (props) => {
               Radius
             </Text>
             <Select
+              withCheckIcon={false}
               value={themeName.defaultRadius as any}
               onChange={(value) => updateThemeRadius(value as MantineRadius)}
-              data={Object.keys(themeName.radius).map((key) => ({
-                value: key,
-                label: key.charAt(0).toUpperCase() + key.slice(1),
-              }))}
+              data={Object.keys(themeName.radius).map((key) => {
+                return {
+                  value: key,
+                  label: key.toUpperCase(),
+                };
+              })}
             />
           </Box>
+          <Divider />
+          <Flex align="center" justify="space-between" gap="md" p="sm" pt={16}>
+            <Text fw="bold" fz="md">
+              Auto Contrast
+            </Text>
+            <Switch
+              size="md"
+              checked={themeName.autoContrast}
+              onChange={handleAutoContrastChange}
+            />
+          </Flex>
         </Stack>
       </Drawer>
     </Fragment>

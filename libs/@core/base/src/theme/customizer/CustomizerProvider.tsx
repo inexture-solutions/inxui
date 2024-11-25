@@ -16,6 +16,7 @@ const withThemeProvider = <P extends object>(
           ...theme,
           primaryColor: currentTheme.primaryColor,
           defaultRadius: currentTheme.defaultRadius,
+          autoContrast: currentTheme.autoContrast,
         }}
       >
         <Component {...props} />
