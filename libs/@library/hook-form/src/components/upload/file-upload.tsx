@@ -13,7 +13,6 @@ import type { FC } from "react";
 import { useState } from "react";
 import type { FileRejection, FileWithPath } from "@inexture/dropzone";
 import { Dropzone } from "@inexture/dropzone";
-import { IconX } from "@tabler/icons-react";
 import uploadIcon from "../../assets/img/upload.svg";
 import type { FileUploadI } from "../../types";
 import AcceptedFileTypeCard from "./accepted-file-type-card";
@@ -274,7 +273,7 @@ const FileUpload: FC<FileUploadI> = ({
                             : setError(name, {});
                         }}
                       >
-                        <IconX stroke={1.5} />
+                        X
                       </ActionIcon>
                     </Box>
                   )}
