@@ -1,5 +1,20 @@
 # @inexture/tiptap
 
+## 7.0.0
+
+### Minor Changes
+
+- [`309fe21`](https://github.com/inexture-solutions/inxui/commit/309fe21c137af565bbd2a58fba6e82f9f1f975f3) Thanks [@m4st3rai](https://github.com/m4st3rai)! - What's Included
+
+  - Updated core library
+  - Removed tabler icon
+  - Updated all internal packages
+
+### Patch Changes
+
+- Updated dependencies [[`309fe21`](https://github.com/inexture-solutions/inxui/commit/309fe21c137af565bbd2a58fba6e82f9f1f975f3)]:
+  - @inexture/base@7.0.0
+
 ## 6.0.0
 
 ### Major Changes
