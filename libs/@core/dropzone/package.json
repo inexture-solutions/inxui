@@ -1,6 +1,6 @@
 {
   "name": "@inexture/dropzone",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css"
