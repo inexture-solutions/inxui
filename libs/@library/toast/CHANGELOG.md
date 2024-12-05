@@ -1,5 +1,14 @@
 # @inexture/toast
 
+## 8.0.0
+
+### Major Changes
+
+- [`a0f4aaa`](https://github.com/inexture-solutions/inxui/commit/a0f4aaa7958ec9ad64696855e21d9e7eac326c12) Thanks [@m4st3rai](https://github.com/m4st3rai)! - - Hook Form Re-structured
+  - Updated dependencies
+  - Added zod and resolvers
+  - Updated types and exports
+
 ## 7.0.0
 
 ## 6.0.0
