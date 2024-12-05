@@ -10,6 +10,24 @@
       "import": "./dist/index.mjs",
       "export": "./src/index.js",
       "require": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.mjs",
+      "import": "./dist/components/index.mjs",
+      "export": "./src/components/index.js",
+      "require": "./dist/components/index.js"
+    },
+    "./providers": {
+      "types": "./dist/providers/index.mjs",
+      "import": "./dist/providers/index.mjs",
+      "export": "./src/providers/index.js",
+      "require": "./dist/providers/index.js"
+    },
+    "./plugins/zod": {
+      "types": "./dist/plugins/zod/index.mjs",
+      "import": "./dist/plugins/zod/index.mjs",
+      "export": "./src/plugins/zod/index.js",
+      "require": "./dist/plugins/zod/index.js"
     }
   },
   "files": [
@@ -18,7 +36,6 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint . --ext .tsx,.jsx,.ts --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {

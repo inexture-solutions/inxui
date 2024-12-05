@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { ColorPicker as BaseColorPicker } from "@inexture/base";
-import type { ColorPickerI } from "../../types";
+import type { ColorPickerI } from "../../types/type.ts";
 
-const ColorPicker: FC<ColorPickerI> = ({ name, props }) => {
+const ColorPicker: React.FC<ColorPickerI> = ({ name, props }) => {
   const { control } = useFormContext();
   return (
     <Controller

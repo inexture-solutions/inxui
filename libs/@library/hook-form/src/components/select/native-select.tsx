@@ -1,9 +1,14 @@
-import type { FC } from "react";
+import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { NativeSelect as BaseNativeSelect } from "@inexture/base";
-import type { NativeSelectI } from "../../types";
+import type { NativeSelectI } from "../../types/type.ts";
 
-const NativeSelect: FC<NativeSelectI> = ({ label, name, data, props }) => {
+const NativeSelect: React.FC<NativeSelectI> = ({
+  label,
+  name,
+  data,
+  props,
+}) => {
   const { control } = useFormContext();
 
   return (
@@ -24,9 +29,7 @@ const NativeSelect: FC<NativeSelectI> = ({ label, name, data, props }) => {
             onChange(event.target.value);
           }}
           error={error?.message}
-          data-test-id={
-            props?.["data-test-id"] ? props["data-test-id"] : name
-          }
+          data-test-id={props?.["data-test-id"] ? props["data-test-id"] : name}
           {...props}
         />
       )}

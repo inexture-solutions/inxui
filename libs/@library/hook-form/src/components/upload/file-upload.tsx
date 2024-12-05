@@ -9,16 +9,16 @@ import {
   Text,
 } from "@inexture/base";
 import { Controller, useFormContext } from "react-hook-form";
-import type { FC } from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import type { FileRejection, FileWithPath } from "@inexture/dropzone";
 import { Dropzone } from "@inexture/dropzone";
-import uploadIcon from "../../assets/img/upload.svg";
-import type { FileUploadI } from "../../types";
+import type { FileUploadI } from "../../types/type.ts";
 import AcceptedFileTypeCard from "./accepted-file-type-card";
 import RejectedFileTypeCard from "./rejected-file-type-card";
+// @ts-ignore
+import uploadIcon from "../../assets/img/upload.svg";
 
-const FileUpload: FC<FileUploadI> = ({
+const FileUpload: React.FC<FileUploadI> = ({
   name,
   accept,
   allowedMessage,

@@ -1,10 +1,9 @@
 import "react-phone-input-2/lib/style.css";
-import type { FC } from "react";
+import React from "react";
 import type { PhoneInputProps } from "react-phone-input-2";
 import PhoneInput from "react-phone-input-2";
 import { Controller, useFormContext } from "react-hook-form";
 import { Box, Flex, Text } from "@inexture/base";
-import "./phone-input.css";
 
 interface InputPhoneI {
   name: string;
@@ -13,7 +12,7 @@ interface InputPhoneI {
   props?: Partial<PhoneInputProps>;
 }
 
-const InputPhone: FC<InputPhoneI> = ({
+const InputPhone: React.FC<InputPhoneI> = ({
   name,
   label,
   withAsterisk = false,

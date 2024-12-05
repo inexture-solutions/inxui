@@ -1,18 +1,20 @@
 {
   "include": [
-    "."
+    ".",
+    "./src/types/index.d.ts",
+    "./src/*.ts"
   ],
   "compilerOptions": {
+    "lib": ["ESNext", "dom"],
     "jsx": "preserve",
-    "declaration": true,
-    "declarationMap": true,
-    "emitDeclarationOnly": true,
     "module": "ESNext",
-    "moduleResolution":"Bundler",
+    "moduleResolution": "Bundler",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
   },
-  "exclude": [
-    "dist",
-    "build",
-    "node_modules"
-  ]
+  "exclude": ["dist", "node_modules"]
 }

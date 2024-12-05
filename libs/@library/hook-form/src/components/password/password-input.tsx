@@ -1,10 +1,9 @@
-import type { FC } from "react";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { PasswordInput as BasePasswordInput } from "@inexture/base";
 import { Controller, useFormContext } from "react-hook-form";
-import type { PasswordI } from "../../types";
+import type { PasswordI } from "../../types/type.ts";
 
-const PasswordInput: FC<PasswordI> = ({ name, label, props }) => {
+const PasswordInput: React.FC<PasswordI> = ({ name, label, props }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const { control } = useFormContext();
 

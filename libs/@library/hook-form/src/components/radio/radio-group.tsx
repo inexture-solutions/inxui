@@ -1,13 +1,18 @@
-import type { FC } from "react";
+import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import {
   Group,
   Radio as BaseRadio,
   RadioGroup as BaseRadioGroup,
 } from "@inexture/base";
-import type { RadioGroupI } from "../../types";
+import type { RadioGroupI } from "../../types/type.ts";
 
-const RadioGroup: FC<RadioGroupI> = ({ name, label = "", props, options }) => {
+const RadioGroup: React.FC<RadioGroupI> = ({
+  name,
+  label = "",
+  props,
+  options,
+}) => {
   const { control } = useFormContext();
 
   return (

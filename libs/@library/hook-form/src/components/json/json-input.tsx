@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import React from "react";
 import { JsonInput as BaseJsonInput } from "@inexture/base";
 import { Controller, useFormContext } from "react-hook-form";
-import type { JsonInputI } from "../../types";
+import type { JsonInputI } from "../../types/type.ts";
 
-const JsonInput: FC<JsonInputI> = ({ name, label, props }) => {
+const JsonInput: React.FC<JsonInputI> = ({ name, label, props }) => {
   const { control } = useFormContext();
   return (
     <Controller

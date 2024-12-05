@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { MultiSelect as BaseMultiSelect } from "@inexture/base";
-import type { MultiSelectI } from "../../types";
+import type { MultiSelectI } from "../../types/type.ts";
 
-const MultiSelect: FC<MultiSelectI> = ({ label, name, data, props }) => {
+const MultiSelect: React.FC<MultiSelectI> = ({ label, name, data, props }) => {
   const { control } = useFormContext();
 
   return (

@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import React from "react";
 import { Chip as BaseChip } from "@inexture/base";
 import { Controller, useFormContext } from "react-hook-form";
-import type { ChipI } from "../../types";
+import type { ChipI } from "../../types/type.ts";
 
-const Chip: FC<ChipI> = ({ name, label, props }) => {
+const Chip: React.FC<ChipI> = ({ name, label, props }) => {
   const { control } = useFormContext();
   return (
     <Controller

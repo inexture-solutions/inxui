@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Flex, Switch as BaseSwitch, Text } from "@inexture/base";
-import type { SwitchGroupI } from "../../types";
+import type { SwitchGroupI } from "../../types/type.ts";
 
 const SwitchGroup: FC<SwitchGroupI> = ({
   name,

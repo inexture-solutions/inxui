@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import type { DatePickerProps as BaseDatePickerProps } from "@inexture/dates";
 import { DatePicker as BaseDatePicker } from "@inexture/dates";
@@ -8,7 +8,7 @@ interface DatePickerProps
   name: string;
 }
 
-const DatePicker: FC<DatePickerProps> = ({ name, ...props }) => {
+const DatePicker: React.FC<DatePickerProps> = ({ name, ...props }) => {
   const { control } = useFormContext();
 
   return (

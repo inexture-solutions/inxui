@@ -1,18 +1,11 @@
-import { Box, Button, Paper, Text } from "@inexture/base";
+import { Box, Paper } from "@inexture/base";
 
 const HomePage = () => {
   return (
-    <Box p="xl" mt={180}>
+    <Box p="xl">
       <Paper>
         <Box p="md" ta="center">
           <h1>Playground</h1>
-          <Button>Themed Button</Button>
-          <Text fw={"bolder"} c={"theme"}>
-            hello
-          </Text>
-          <Paper>
-            <h1>Playground</h1>
-          </Paper>
         </Box>
       </Paper>
     </Box>

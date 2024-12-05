@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Select as BaseSelect } from "@inexture/base";
-import type { SelectI } from "../../types";
+import type { SelectI } from "../../types/type.ts";
 
-const Select: FC<SelectI> = ({ label, name, data, props }) => {
+const Select: React.FC<SelectI> = ({ label, name, data, props }) => {
   const { control } = useFormContext();
 
   return (

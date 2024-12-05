@@ -2,6 +2,7 @@ import type { FC } from "react";
 import { Image, Paper, Stack, Text } from "@inexture/base";
 import type { FileRejection } from "@inexture/dropzone";
 import { ErrorCode } from "react-dropzone-esm";
+// @ts-ignore
 import rejectedIcon from "../../assets/img/rejected.svg";
 
 const RejectedFileTypeCard: FC<{

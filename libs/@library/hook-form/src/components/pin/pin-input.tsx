@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Box, PinInput as BasePinInput, Text } from "@inexture/base";
-import type { PinInputI } from "../../types";
+import type { PinInputI } from "../../types/type.ts";
 
-const PinInput: FC<PinInputI> = ({ name, label, labelProps, props }) => {
+const PinInput: React.FC<PinInputI> = ({ name, label, labelProps, props }) => {
   const { control } = useFormContext();
   return (
     <Controller

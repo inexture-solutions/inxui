@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { RangeSlider as BaseRangeSlider } from "@inexture/base";
-import type { RangeSliderI } from "../../types";
+import type { RangeSliderI } from "../../types/type.ts";
 
-const RangeSlider: FC<RangeSliderI> = ({ name, data, props, label }) => {
+const RangeSlider: React.FC<RangeSliderI> = ({ name, data, props, label }) => {
   const { control } = useFormContext();
   return (
     <Controller

@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Box, Rating as BaseRating, Text } from "@inexture/base";
-import type { RatingI } from "../../types";
+import type { RatingI } from "../../types/type.ts";
 
-const Rating: FC<RatingI> = ({ name, label, labelProps, props }) => {
+const Rating: React.FC<RatingI> = ({ name, label, labelProps, props }) => {
   const { control } = useFormContext();
   return (
     <Controller

@@ -1,9 +1,6 @@
-import type { FC } from "react";
+import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
-import type {
-  DatePickerInputProps,
-  DatePickerType,
-} from "@inexture/dates";
+import type { DatePickerInputProps, DatePickerType } from "@inexture/dates";
 import { DatePickerInput as BaseDatePickerInput } from "@inexture/dates";
 
 interface DatePickerInputI<T extends DatePickerType> {
@@ -12,7 +9,7 @@ interface DatePickerInputI<T extends DatePickerType> {
   props?: Partial<DatePickerInputProps<T>>;
 }
 
-const DatePickerInput: FC<DatePickerInputI<DatePickerType>> = ({
+const DatePickerInput: React.FC<DatePickerInputI<DatePickerType>> = ({
   name,
   label,
   props,

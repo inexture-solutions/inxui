@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import React from "react";
 import { Chip as BaseChip, Flex } from "@inexture/base";
 import { Controller, useFormContext } from "react-hook-form";
-import type { ChipGroupI } from "../../types";
+import type { ChipGroupI } from "../../types/type.ts";
 
-const ChipGroup: FC<ChipGroupI<boolean>> = ({
+const ChipGroup: React.FC<ChipGroupI<boolean>> = ({
   name,
   data = [],
   inline = true,

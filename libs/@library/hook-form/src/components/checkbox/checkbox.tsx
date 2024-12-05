@@ -1,7 +1,7 @@
 import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Checkbox as BaseCheckbox } from "@inexture/base";
-import type { CheckboxI } from "../../types";
+import type { CheckboxI } from "../../types/type.ts";
 
 const Checkbox: React.FC<CheckboxI> = ({ name, label, props }) => {
   const { control } = useFormContext();

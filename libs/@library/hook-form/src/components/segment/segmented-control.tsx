@@ -1,9 +1,13 @@
-import type { FC } from "react";
+import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { SegmentedControl as BaseSegmentedControl } from "@inexture/base";
-import type { SegmentedControlI } from "../../types";
+import type { SegmentedControlI } from "../../types/type.ts";
 
-const SegmentedControl: FC<SegmentedControlI> = ({ name, data, props }) => {
+const SegmentedControl: React.FC<SegmentedControlI> = ({
+  name,
+  data,
+  props,
+}) => {
   const { control } = useFormContext();
   return (
     <Controller

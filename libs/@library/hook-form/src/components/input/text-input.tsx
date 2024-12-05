@@ -1,7 +1,7 @@
 import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { TextInput as BaseInput } from "@inexture/base";
-import type { TextInputI } from "../../types";
+import { TextInputI } from "../../types/type.ts";
 
 const TextInput: React.FC<TextInputI> = ({ name, label, props }) => {
   const { control } = useFormContext();

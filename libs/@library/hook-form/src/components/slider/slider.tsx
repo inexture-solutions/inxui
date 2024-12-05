@@ -1,7 +1,7 @@
 import { Controller, useFormContext } from "react-hook-form";
 import { Slider as BaseSlider, Text } from "@inexture/base";
 import type { FC } from "react";
-import type { SliderI } from "../../types";
+import type { SliderI } from "../../types/type.ts";
 
 const Slider: FC<SliderI> = ({ name, data, props, label, labelProps }) => {
   const { control } = useFormContext();

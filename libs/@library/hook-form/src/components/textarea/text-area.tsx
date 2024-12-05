@@ -1,7 +1,7 @@
 import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Textarea as BaseTextarea } from "@inexture/base";
-import type { TextAreaI } from "../../types";
+import type { TextAreaI } from "../../types/type.ts";
 
 const Textarea: React.FC<TextAreaI> = ({
   name,

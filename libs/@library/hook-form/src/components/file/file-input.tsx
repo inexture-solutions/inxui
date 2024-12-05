@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { FileInput as BaseFileInput } from "@inexture/base";
-import type { FileInputI } from "../../types";
+import type { FileInputI } from "../../types/type.ts";
 
-const FileInput: FC<FileInputI> = ({ name, label, props }) => {
+const FileInput: React.FC<FileInputI> = ({ name, label, props }) => {
   const { control } = useFormContext();
   return (
     <Controller

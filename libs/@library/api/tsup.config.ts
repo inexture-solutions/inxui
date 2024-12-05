@@ -13,7 +13,7 @@ export default defineConfig((options) => ({
     "@inexture/toast",
     "@inexture/auth",
     "@tanstack/react-query",
-    "zustand"
+    "zustand",
   ],
   ...options,
 }));

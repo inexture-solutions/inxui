@@ -1,11 +1,11 @@
 import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import {
-  CheckboxGroup as BaseCheckboxGroup,
   Checkbox as BaseCheckbox,
+  CheckboxGroup as BaseCheckboxGroup,
   Flex,
 } from "@inexture/base";
-import type { CheckboxGroupI, ComboboxItem } from "../../types";
+import type { CheckboxGroupI, ComboboxItem } from "../../types/type.ts";
 
 const CheckboxGroup: React.FC<CheckboxGroupI> = ({
   name,

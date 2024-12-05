@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { DateTimePicker as BaseDateTimePicker } from "@inexture/dates";
-import type { DateTimePickerI } from "../../types";
+import type { DateTimePickerI } from "../../types/type.ts";
 
-const DateTimePicker: FC<DateTimePickerI> = ({ name, label, props }) => {
+const DateTimePicker: React.FC<DateTimePickerI> = ({ name, label, props }) => {
   const { control } = useFormContext();
 
   return (

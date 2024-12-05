@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import React from "react";
 import { DateInput as BaseDateInput } from "@inexture/dates";
 import { Controller, useFormContext } from "react-hook-form";
-import type { DateInputI } from "../../types";
+import type { DateInputI } from "../../types/type.ts";
 
-const DateInput: FC<DateInputI> = ({ name, label, props }) => {
+const DateInput: React.FC<DateInputI> = ({ name, label, props }) => {
   const { control } = useFormContext();
 
   return (

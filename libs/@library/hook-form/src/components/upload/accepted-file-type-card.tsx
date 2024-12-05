@@ -2,13 +2,21 @@ import type { FC, ReactNode } from "react";
 import { Box, Flex, Grid, Image, Paper, Text } from "@inexture/base";
 import type { FileWithPath } from "@inexture/dropzone";
 import { MIME_TYPES } from "@inexture/dropzone";
+// @ts-ignore
 import svg from "../../assets/img/svg.svg";
+// @ts-ignore
 import pdf from "../../assets/img/pdf.svg";
+// @ts-ignore
 import jpg from "../../assets/img/jpg.svg";
+// @ts-ignore
 import doc from "../../assets/img/doc.svg";
+// @ts-ignore
 import ppt from "../../assets/img/ppt.svg";
+// @ts-ignore
 import xls from "../../assets/img/xls.svg";
+// @ts-ignore
 import png from "../../assets/img/png.svg";
+// @ts-ignore
 import webp from "../../assets/img/webp.svg";
 
 interface FileIcon {
@@ -116,7 +124,7 @@ const AcceptedFileTypeCard: FC<{
                   mx="auto"
                   src={
                     fileIConsStatic.find(
-                      (item) => item.extension === urlInfo.extension
+                      (item) => item.extension === urlInfo.extension,
                     )?.icon
                   }
                   alt="AcceptedFile"

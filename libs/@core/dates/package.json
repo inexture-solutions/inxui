@@ -7,10 +7,10 @@
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs",
       "export": "./src/index.js",
       "require": "./dist/index.js"
@@ -28,13 +28,13 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@inexture/base": "workspace:*",
     "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "tsup": "^8.3.5"
   },
   "dependencies": {
+    "@inexture/base": "workspace:*",
     "@mantine/dates": "^7.14.3",
     "dayjs": "^1.11.13",
     "react-dom": "^18.3.1",
@@ -43,6 +43,7 @@
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
-    "@inexture/base": "*"
+    "@inexture/base": "*",
+    "@mantine/dates": "^7.14.3"
   }
 }
