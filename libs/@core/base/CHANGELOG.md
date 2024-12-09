@@ -1,5 +1,11 @@
 # @inexture/base
 
+## 10.0.0
+
+### Minor Changes
+
+- [`85b75e1`](https://github.com/inexture-solutions/inxui/commit/85b75e134d0644ba22d2736ac7aae2d140a42197) Thanks [@m4st3rai](https://github.com/m4st3rai)! - - Updated component to accept theme
+
 ## 9.0.0
 
 ### Minor Changes
