@@ -29,16 +29,16 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.1",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
     "tsup": "^8.3.5"
   },
   "dependencies": {
     "@inexture/base": "workspace:*",
     "@mantine/dates": "^7.14.3",
     "dayjs": "^1.11.13",
-    "react-dom": "^18.3.1",
-    "react": "^18.3.1",
+    "react-dom": "^19.0.0",
+    "react": "^19.0.0",
     "shx": "^0.3.4",
     "typescript": "^5.7.2"
   },

@@ -6,7 +6,7 @@ import {
 } from "@mantine/core";
 import { Icon } from "@iconify/react";
 
-const ToggleMode: React.FC = () => {
+const ToggleMode = () => {
   const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme("light", {
     getInitialValueInEffect: true,

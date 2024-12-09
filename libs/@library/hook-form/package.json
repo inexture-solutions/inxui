@@ -43,16 +43,16 @@
     "@inexture/dates": "workspace:*",
     "@inexture/dropzone": "workspace:*",
     "@types/node": "^22.10.1",
-    "@types/react": "^18.3.12",
+    "@types/react": "^19.0.1",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-dropzone-esm": "^15.2.0",
-    "react-hook-form": "^7.53.2",
+    "react-hook-form": "^7.54.0",
     "react-phone-input-2": "^2.15.1",
     "zod": "^3.23.8"
   },

@@ -2,8 +2,11 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
-// Base directory where "libs" folder is located
-const baseDir = path.resolve(__dirname, "libs");
+// Base directories where "libs" and "apps" folders are located
+const baseDirs = [
+  path.resolve(__dirname, "libs"),
+  path.resolve(__dirname, "apps"),
+];
 
 // Function to recursively update dependencies
 const updateDependencies = (currentDir) => {
@@ -33,10 +36,14 @@ const updateDependencies = (currentDir) => {
   });
 };
 
-// Start the process from the "libs" folder
-if (fs.existsSync(baseDir)) {
-  updateDependencies(baseDir);
-  console.log("Dependency updates completed.");
-} else {
-  console.error(`The folder "${baseDir}" does not exist.`);
-}
+// Start the process for each base directory
+baseDirs.forEach((baseDir) => {
+  if (fs.existsSync(baseDir)) {
+    console.log(`Starting dependency updates in "${baseDir}"...`);
+    updateDependencies(baseDir);
+  } else {
+    console.error(`The folder "${baseDir}" does not exist.`);
+  }
+});
+
+console.log("Dependency updates completed.");

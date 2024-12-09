@@ -11,15 +11,7 @@ const config: Options = {
   minifyIdentifiers: true,
   bundle: true,
   treeshake: false,
-  external: [
-    "@mantine/core",
-    "@mantine/hooks",
-    "@iconify/react",
-    "crypto-ts",
-    "react",
-    "react-dom",
-    "zustand",
-  ],
+  external: ["crypto-ts", "react", "react-dom", "zustand"],
 };
 
 export default defineConfig([
