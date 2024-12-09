@@ -1,5 +1,20 @@
 # @inexture/highlight
 
+## 9.0.0
+
+### Minor Changes
+
+- [`f7e7891`](https://github.com/inexture-solutions/inxui/commit/f7e78911c0606b44901fd1687ede0cd386cc1f50) Thanks [@m4st3rai](https://github.com/m4st3rai)! - - All internal packages updated
+  - Fixed type error in Hook Form
+  - Fixed Theme Proivder - Now accepts theme
+  - Fixed component return type in provider
+  - Minor type error fixes
+
+### Patch Changes
+
+- Updated dependencies [[`f7e7891`](https://github.com/inexture-solutions/inxui/commit/f7e78911c0606b44901fd1687ede0cd386cc1f50)]:
+  - @inexture/base@9.0.0
+
 ## 8.0.0
 
 ### Major Changes
