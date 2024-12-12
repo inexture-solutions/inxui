@@ -1,11 +1,9 @@
-import type { FC } from "react";
 import { Image, Paper, Stack, Text } from "@inexture/base";
 import type { FileRejection } from "@inexture/dropzone";
 import { ErrorCode } from "react-dropzone-esm";
-// @ts-ignore
-import rejectedIcon from "../../assets/img/rejected.svg";
+import React from "react";
 
-const RejectedFileTypeCard: FC<{
+const RejectedFileTypeCard: React.FC<{
   size?: number;
   files: FileRejection[];
   cardHeight: number;
@@ -38,7 +36,7 @@ const RejectedFileTypeCard: FC<{
           maw={cardHeight - 70}
           style={{ transform: "rotate(45deg)" }}
           mx="auto"
-          src={rejectedIcon}
+          src="https://res.cloudinary.com/daoqyyrrh/image/upload/v1733988253/rejected_sjv81y.svg"
           alt="Rejected"
         />
         <Text ta="center" fz={13} maw={500} mx="auto">

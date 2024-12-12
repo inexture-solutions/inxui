@@ -1,29 +1,29 @@
 import type {
-  TextInputProps,
+  CheckboxGroupProps,
   CheckboxProps,
+  ChipGroupProps,
+  ChipProps,
+  ColorInputProps,
+  ColorPickerProps,
+  ComboboxData,
+  FileInputProps,
+  JsonInputProps,
+  MultiSelectProps,
+  NativeSelectProps,
   NumberInputProps,
   PasswordInputProps,
-  TextProps,
   PinInputProps,
   RadioGroupProps,
-  ComboboxData,
+  RangeSliderProps,
   RatingProps,
   SegmentedControlProps,
   SelectProps,
-  MultiSelectProps,
-  NativeSelectProps,
-  TextareaProps,
-  SwitchProps,
-  SwitchGroupProps,
-  RangeSliderProps,
   SliderProps,
-  JsonInputProps,
-  FileInputProps,
-  ColorInputProps,
-  ColorPickerProps,
-  ChipProps,
-  ChipGroupProps,
-  CheckboxGroupProps,
+  SwitchGroupProps,
+  SwitchProps,
+  TextareaProps,
+  TextInputProps,
+  TextProps,
 } from "@inexture/base";
 import type { ReactNode } from "react";
 import type { DateInputProps, DateTimePickerProps } from "@inexture/dates";
@@ -138,6 +138,7 @@ export interface FileUploadI {
   name: string;
   accept: string[];
   allowedMessage: string;
+  preview?: boolean;
   withAsterisk?: boolean;
   label?: string;
   pickFileSize?: boolean;

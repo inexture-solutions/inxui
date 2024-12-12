@@ -15,10 +15,10 @@ import { Dropzone } from "@inexture/dropzone";
 import type { FileUploadI } from "../../types/type.ts";
 import AcceptedFileTypeCard from "./accepted-file-type-card";
 import RejectedFileTypeCard from "./rejected-file-type-card";
-// @ts-ignore
-import uploadIcon from "../../assets/img/upload.svg";
+import AllowedMessageCard from "./components/allowed-message-card.tsx";
 
 const FileUpload: React.FC<FileUploadI> = ({
+  preview = false,
   name,
   accept,
   allowedMessage,
@@ -73,7 +73,7 @@ const FileUpload: React.FC<FileUploadI> = ({
                   rejected: false,
                 };
               });
-              setError(name, {}); // Updated to pass an empty object instead of null
+              setError(name, {});
               onChange(files);
             };
 
@@ -88,7 +88,6 @@ const FileUpload: React.FC<FileUploadI> = ({
                   rejected: true,
                 };
               });
-              onChange(files);
             };
 
             return (
@@ -131,6 +130,7 @@ const FileUpload: React.FC<FileUploadI> = ({
                         >
                           {fileVal === "string" && value ? (
                             <AcceptedFileTypeCard
+                              preview={preview}
                               files={null}
                               isMultiple={props?.multiple ?? false}
                               url={value as string}
@@ -147,7 +147,9 @@ const FileUpload: React.FC<FileUploadI> = ({
                                   w={cardHeight - 80}
                                   h={cardHeight - 80}
                                   mx="auto"
-                                  src={uploadIcon}
+                                  src={
+                                    "https://res.cloudinary.com/daoqyyrrh/image/upload/v1733988253/upload_sxruyf.svg"
+                                  }
                                   alt="Upload File"
                                 />
                                 <Box>
@@ -192,6 +194,7 @@ const FileUpload: React.FC<FileUploadI> = ({
                                   cardHeight={cardHeight}
                                   files={localFiles as FileWithPath[]}
                                   isMultiple={props?.multiple ?? false}
+                                  preview={preview}
                                 />
                               </Dropzone.Accept>
                               {allowedStatus.accepted && (
@@ -199,69 +202,25 @@ const FileUpload: React.FC<FileUploadI> = ({
                                   cardHeight={cardHeight}
                                   files={localFiles as FileWithPath[]}
                                   isMultiple={props?.multiple ?? false}
+                                  preview={preview}
                                 />
                               )}
                             </Flex>
                           )}
                         </Box>
                       )}
-
                       <Divider />
-                      <Flex
-                        justify="space-between"
-                        gap="sm"
-                        px="sm"
-                        style={{ textAlign: "center" }}
-                      >
-                        <Flex
-                          gap={0}
-                          py="xs"
-                          justify="center"
-                          w="100%"
-                          direction="column"
-                          align="center"
-                        >
-                          <Text fw={600} fz="xs">
-                            {fileSize}
-                            MB
-                          </Text>
-                          <Text fz="xs">Max Size</Text>
-                        </Flex>
-                        <Divider orientation="vertical" />
-                        <Flex
-                          gap={0}
-                          py="xs"
-                          justify="center"
-                          w="100%"
-                          direction="column"
-                          align="center"
-                        >
-                          <Text fw={600} fz="xs">
-                            {allowedMessage}
-                          </Text>
-                          <Text fz="xs">Allowed Files</Text>
-                        </Flex>
-                      </Flex>
+                      <AllowedMessageCard
+                        fileSize={fileSize}
+                        allowedMessage={allowedMessage}
+                      />
                     </Box>
                   </Dropzone>
 
                   {(value || localFiles.length > 0) && (
-                    <Box
-                      pos="absolute"
-                      top={5}
-                      right={5}
-                      style={{
-                        transform: "scale(0)",
-                        transition: "transform 0.3s",
-                      }}
-                      onMouseEnter={(e) =>
-                        (e.currentTarget.style.transform = "scale(1)")
-                      }
-                      onMouseLeave={(e) =>
-                        (e.currentTarget.style.transform = "scale(0)")
-                      }
-                    >
+                    <Box pos="absolute" top={5} right={5}>
                       <ActionIcon
+                        variant="subtle"
                         onClick={() => {
                           setValue(name, "");
                           setLocalFiles([]);
