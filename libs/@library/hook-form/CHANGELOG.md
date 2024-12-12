@@ -1,5 +1,20 @@
 # @inexture/hook-form
 
+## 11.0.0
+
+### Major Changes
+
+- [`9dd04a8`](https://github.com/inexture-solutions/inxui/commit/9dd04a8e4f0233078c46ca739408d8f196126700) Thanks [@m4st3rai](https://github.com/m4st3rai)! - File Upload component updated
+  = File Preview Added
+  = Code Refactored
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @inexture/base@11.0.0
+  - @inexture/dates@11.0.0
+  - @inexture/dropzone@11.0.0
+
 ## 10.0.0
 
 ### Patch Changes

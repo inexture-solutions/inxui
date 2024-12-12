@@ -1,5 +1,13 @@
 # @inexture/api
 
+## 11.0.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @inexture/base@11.0.0
+  - @inexture/toast@11.0.0
+
 ## 10.0.0
 
 ### Patch Changes
