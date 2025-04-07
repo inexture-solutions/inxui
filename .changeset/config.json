@@ -24,7 +24,6 @@
   "baseBranch": "main",
   "access": "public",
   "updateInternalDependencies": "patch",
-  "ignore": ["docs"],
   "snapshot": {
     "useCalculatedVersion": true,
     "prereleaseTemplate": "{tag}-{commitHash}",
