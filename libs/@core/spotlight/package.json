@@ -29,16 +29,16 @@
   },
   "devDependencies": {
     "@inexture/base": "workspace:*",
-    "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.1",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2"
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@mantine/spotlight": "^7.14.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "shx": "^0.3.4"
+    "@mantine/spotlight": "^7.17.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "shx": "^0.4.0"
   },
   "peerDependencies": {
     "@inexture/base": "*"

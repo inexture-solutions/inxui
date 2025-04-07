@@ -29,18 +29,18 @@
   },
   "devDependencies": {
     "@inexture/base": "workspace:*",
-    "@types/node": "^22.10.1",
-    "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.1",
-    "recharts": "^2.14.1",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2"
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
+    "recharts": "^2.15.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@mantine/charts": "^7.14.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "shx": "^0.3.4"
+    "@mantine/charts": "^7.17.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "shx": "^0.4.0"
   },
   "peerDependencies": {
     "@inexture/base": "*",

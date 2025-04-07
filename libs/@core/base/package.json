@@ -55,22 +55,22 @@
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.6",
-    "@types/node": "^22.10.1",
-    "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.1",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
     "crypto-ts": "^1.0.2",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2"
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@iconify/react": "^5.1.0",
-    "@mantine/core": "^7.14.3",
-    "@mantine/hooks": "^7.14.3",
-    "@mantine/modals": "^7.14.3",
+    "@iconify/react": "^5.2.1",
+    "@mantine/core": "^7.17.3",
+    "@mantine/hooks": "^7.17.3",
+    "@mantine/modals": "^7.17.3",
     "js-cookie": "^3.0.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "shx": "^0.3.4",
-    "zustand": "^5.0.2"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "shx": "^0.4.0",
+    "zustand": "^5.0.3"
   }
 }

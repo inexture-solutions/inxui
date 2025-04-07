@@ -29,20 +29,20 @@
   },
   "devDependencies": {
     "@inexture/base": "workspace:*",
-    "@types/node": "^22.10.1",
-    "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.1",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2"
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@mantine/tiptap": "^7.14.3",
-    "@tiptap/extension-underline": "^2.10.3",
-    "@tiptap/pm": "^2.10.3",
-    "@tiptap/react": "^2.10.3",
-    "@tiptap/starter-kit": "^2.10.3",
-    "react": "^19.0.0",
-    "shx": "^0.3.4"
+    "@mantine/tiptap": "^7.17.3",
+    "@tiptap/extension-underline": "^2.11.7",
+    "@tiptap/pm": "^2.11.7",
+    "@tiptap/react": "^2.11.7",
+    "@tiptap/starter-kit": "^2.11.7",
+    "react": "^19.1.0",
+    "shx": "^0.4.0"
   },
   "peerDependencies": {
     "@inexture/base": "*"
