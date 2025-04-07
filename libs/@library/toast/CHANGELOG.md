@@ -1,5 +1,11 @@
 # @inexture/toast
 
+## 13.0.0
+
+### Major Changes
+
+- [`1cdee79`](https://github.com/inexture-solutions/inxui/commit/1cdee793a18e9677937ecc7bef20adf1d045d2b9) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Removed docs and internal packages
+
 ## 12.0.0
 
 ### Major Changes

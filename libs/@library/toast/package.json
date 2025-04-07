@@ -1,7 +1,7 @@
 {
   "name": "@inexture/toast",
   "description": "A simple yet elegant toast notification system",
-  "version": "12.0.0",
+  "version": "13.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
