@@ -1,4 +1,3 @@
-```markdown
 # 📦 InxUI
 
 InxUI is a modular and customizable UI library built with React, designed to streamline the development of modern web applications. It provides a collection of reusable components, hooks, and utilities to enhance productivity and maintainability.
@@ -13,7 +12,6 @@ InxUI is a modular and customizable UI library built with React, designed to str
 - **Modern Tooling**: Uses `tsup` for bundling and `pnpm` for dependency management.
 - **MIT Licensed**: Open-source and free to use.
 
----
 
 ## 📂 Project Structure
 
