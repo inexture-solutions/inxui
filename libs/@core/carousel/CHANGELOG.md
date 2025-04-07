@@ -1,5 +1,16 @@
 # @inexture/carousel
 
+## 12.0.0
+
+### Major Changes
+
+- [`fc5b37d`](https://github.com/inexture-solutions/inxui/commit/fc5b37d0090f1de37da447f4cd7263991a5be9e0) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Packages Upgraded
+
+### Patch Changes
+
+- Updated dependencies [[`fc5b37d`](https://github.com/inexture-solutions/inxui/commit/fc5b37d0090f1de37da447f4cd7263991a5be9e0)]:
+  - @inexture/base@12.0.0
+
 ## 11.0.0
 
 ### Patch Changes
