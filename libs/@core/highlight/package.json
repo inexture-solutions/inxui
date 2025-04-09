@@ -1,6 +1,6 @@
 {
   "name": "@inexture/highlight",
-  "version": "13.0.0",
+  "version": "14.0.0",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css"
