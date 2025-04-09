@@ -1,5 +1,16 @@
 # @inexture/charts
 
+## 14.0.0
+
+### Major Changes
+
+- [`dc6d596`](https://github.com/inexture-solutions/inxui/commit/dc6d596f12f00cf1fc74d6185a21d93ea788afcf) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Upgraded core dependencies
+
+### Patch Changes
+
+- Updated dependencies [[`dc6d596`](https://github.com/inexture-solutions/inxui/commit/dc6d596f12f00cf1fc74d6185a21d93ea788afcf)]:
+  - @inexture/base@14.0.0
+
 ## 13.0.0
 
 ### Major Changes
