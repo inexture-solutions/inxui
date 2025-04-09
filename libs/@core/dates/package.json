@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@inexture/base": "workspace:*",
-    "@mantine/dates": "^7.17.3",
+    "@mantine/dates": "^7.17.4",
     "dayjs": "^1.11.13",
     "react-dom": "^19.1.0",
     "react": "^19.1.0",

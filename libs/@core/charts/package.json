@@ -37,7 +37,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@mantine/charts": "^7.17.3",
+    "@mantine/charts": "^7.17.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "shx": "^0.4.0"

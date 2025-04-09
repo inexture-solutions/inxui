@@ -15,14 +15,14 @@
     "updates": "node check.updates.ts"
   },
   "devDependencies": {
-    "@types/node": "^22.9.0",
-    "@changesets/changelog-github": "^0.5.0",
-    "@changesets/cli": "^2.27.5",
-    "prettier": "^3.3.3",
-    "turbo": "^2.2.3",
-    "typescript": "^5.6.3"
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.28.1",
+    "@types/node": "^22.14.0",
+    "prettier": "^3.5.3",
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.3"
   },
-  "packageManager": "pnpm@9.12.3",
+  "packageManager": "pnpm@10.8.0",
   "engines": {
     "node": ">=20.18.0"
   }
