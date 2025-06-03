@@ -1,4 +1,10 @@
 packages:
-  - "apps/docs"
-  - "libs/@core/*"
-  - "libs/@library/*"
+  - apps/docs
+  - libs/@core/*
+  - libs/@library/*
+
+ignoredBuiltDependencies:
+  - esbuild
+
+onlyBuiltDependencies:
+  - '@swc/core'

@@ -22,10 +22,10 @@
   "devDependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tsup": "^8.4.0",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "sonner": "^2.0.3"
+    "sonner": "^2.0.5"
   }
 }
