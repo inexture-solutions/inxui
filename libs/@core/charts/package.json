@@ -1,6 +1,8 @@
 {
   "name": "@inexture/charts",
-  "version": "14.0.0",
+  "version": "0.0.0",
+  "description": "A lightweight and customizable charting library built on top of Mantine's chart components. It provides pre-configured chart components and utilities for seamless integration into React applications.",
+  "license": "MIT",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css"
@@ -28,22 +30,22 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@inexture/base": "workspace:*",
-    "@types/node": "^22.15.29",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
-    "recharts": "^2.15.3",
+    "@inexture/core": "workspace:*",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {
     "@mantine/charts": "^8.0.2",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "dayjs": "^1.11.13",
+    "recharts": "^2.15.3",
     "shx": "^0.4.0"
   },
   "peerDependencies": {
-    "@inexture/base": "*",
-    "recharts": "^2.13.0"
+    "@inexture/core": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }

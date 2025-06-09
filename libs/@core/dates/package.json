@@ -1,6 +1,8 @@
 {
   "name": "@inexture/dates",
-  "version": "14.0.0",
+  "version": "0.0.0",
+  "description": "A lightweight and customizable date management library built on top of Mantine's date components. It provides pre-configured date utilities and components for seamless integration into React applications.",
+  "license": "MIT",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css"
@@ -28,22 +30,22 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@types/node": "^22.15.29",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
-    "tsup": "^8.5.0"
-  },
-  "dependencies": {
-    "@inexture/base": "workspace:*",
-    "@mantine/dates": "^8.0.2",
-    "dayjs": "^1.11.13",
-    "react-dom": "^19.1.0",
-    "react": "^19.1.0",
-    "shx": "^0.4.0",
+    "@inexture/core": "workspace:*",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },
+  "dependencies": {
+    "@mantine/dates": "^8.0.2",
+    "dayjs": "^1.11.13",
+    "shx": "^0.4.0"
+  },
   "peerDependencies": {
-    "@inexture/base": "*",
-    "@mantine/dates": "^7.14.3"
+    "@inexture/core": "*",
+    "react": "*",
+    "react-dom": "*"
+
   }
 }

@@ -1,6 +1,8 @@
 {
   "name": "@inexture/carousel",
-  "version": "14.0.0",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "A lightweight and customizable carousel library built on top of Mantine's carousel component. It provides pre-configured carousel components and utilities for seamless integration into React applications.",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css"
@@ -28,21 +30,21 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@inexture/base": "workspace:*",
-    "@types/node": "^22.15.29",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
-    "embla-carousel-react": "^8.6.0",
+    "@inexture/core": "workspace:*",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {
     "@mantine/carousel": "^8.0.2",
-    "react": "^19.1.0",
+    "embla-carousel-react": "^8.6.0",
     "shx": "^0.4.0"
   },
   "peerDependencies": {
-    "@inexture/base": "*",
-    "embla-carousel-react": "^8.3.0"
+    "@inexture/core": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }

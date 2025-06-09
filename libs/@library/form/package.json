@@ -1,0 +1,64 @@
+{
+  "name": "@inexture/form",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "A comprehensive library of form components built with Mantine and React Hook Form, providing seamless form management with TypeScript support.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "export": "./src/index.ts",
+      "require": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.mjs",
+      "require": "./dist/components/index.js"
+    },
+    "./providers": {
+      "types": "./dist/providers/index.d.ts",
+      "import": "./dist/providers/index.mjs",
+      "require": "./dist/providers/index.js"
+    },
+    "./plugins/zod": {
+      "types": "./dist/plugins/zod/index.d.ts",
+      "import": "./dist/plugins/zod/index.mjs",
+      "export": "./src/plugins/zod/index.ts",
+      "require": "./dist/plugins/zod/index.js"
+    }
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@inexture/core": "workspace:*",
+    "@inexture/dates": "workspace:*",
+    "@inexture/dropzone": "workspace:*",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.1.0",
+    "react-hook-form": "^7.57.0",
+    "react-dropzone-esm": "^15.2.0",
+    "zod": "^3.25.56"
+  },
+  "peerDependencies": {
+    "@inexture/core": "*",
+    "@inexture/dates": "*",
+    "@inexture/dropzone": "*",
+    "react": "*",
+    "react-dom": "*"
+  }
+}

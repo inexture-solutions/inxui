@@ -1,44 +1,24 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@3.0.3/schema.json",
-  "changelog": [
-    "@changesets/changelog-github",
-    {
-      "repo": "inexture-solutions/inxui",
-      "template": {
-        "header": "# 📦 Changelog for ${packageName} - v${version}\n\n---\n",
-        "release": "- **${type}**: ${summary}\n",
-        "major": "## 🚨 Breaking Changes\n\n- **${summary}**\n\n*Impact*: Please review these changes carefully as they may require code modifications or configuration adjustments.",
-        "minor": "## ✨ New Features\n\n- **${summary}**\n\n*Details*: This release includes new features that may enhance or extend functionality.",
-        "patch": "## 🐛 Bug Fixes\n\n- **${summary}**\n\n*Resolution*: Bug fixes included to address reported issues and improve stability.",
-        "dependencyUpdate": "### 📦 Dependency Updates\n\n$DEPENDENCY_UPDATES\n- Updated **${name}** from **${previousVersion}** to **${newVersion}**\n\n*Note*: Please check compatibility if your code relies on this dependency.",
-        "footer": "\n---\n*Changelog generated on ${timestamp} by [Inexture Team](https://inexture.com). Maintained by the [Inexture Team](https://www.inexture.com). For support or feedback, reach out to us!*"
-      }
-    }
-  ],
   "commit": true,
-  "fixed": [
-    [
-      "@inexture/*"
-    ]
-  ],
   "baseBranch": "main",
   "access": "public",
   "updateInternalDependencies": "patch",
   "snapshot": {
     "useCalculatedVersion": true,
-    "prereleaseTemplate": "{tag}-{commitHash}",
+    "prereleaseTemplate": "{tag}-{branch}-{commitHash}",
     "tag": "snapshot"
   },
-  "message": "chore(release): update versions",
+  "changelog": ["@changesets/changelog-github", { "repo": "inexture-solutions/inxui" }],
+  "ignore": [],
+  "message": "Release: updated versions for {packages} on {branch}",
   "versionOptions": {
+    "bumpVersionsWithWorkspaceProtocol": true,
     "onlyUpdatePeerDependentsWhenOutOfRange": true,
     "useCalculatedVersionForSnapshots": true,
     "updateInternalDependencies": "patch"
   },
-  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
-    "updateInternalDependencies": "minor"
-  },
   "release": {
-    "tag": "next"
+    "tag": "latest"
   }
 }

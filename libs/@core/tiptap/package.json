@@ -1,6 +1,8 @@
 {
   "name": "@inexture/tiptap",
-  "version": "14.0.0",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "A rich text editor library built on top of Mantine's Tiptap integration, providing seamless integration and additional toolsify-specific features for React applications.",
   "sideEffects": [
     "./dist/styles.layer.css",
     "./dist/styles.css"
@@ -28,23 +30,24 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@inexture/base": "workspace:*",
-    "@types/node": "^22.15.29",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
+    "@inexture/core": "workspace:*",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {
     "@mantine/tiptap": "^8.0.2",
-    "@tiptap/extension-underline": "^2.12.0",
-    "@tiptap/pm": "^2.12.0",
-    "@tiptap/react": "^2.12.0",
-    "@tiptap/starter-kit": "^2.12.0",
-    "react": "^19.1.0",
+    "@tiptap/extension-underline": "^2.14.0",
+    "@tiptap/pm": "^2.14.0",
+    "@tiptap/react": "^2.14.0",
+    "@tiptap/starter-kit": "^2.14.0",
     "shx": "^0.4.0"
   },
   "peerDependencies": {
-    "@inexture/base": "*"
+    "@inexture/core": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }

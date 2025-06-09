@@ -1,0 +1,78 @@
+{
+  "name": "@inexture/core",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "A core library for building customizable UI components and themes using Mantine. It provides pre-configured components, utilities, and theme management for seamless integration into React projects.",
+  "sideEffects": [
+    "./dist/styles.layer.css",
+    "./dist/styles.css",
+    "./dist/styles/*"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "export": "./src/index.js",
+      "require": "./dist/index.js"
+    },
+    "./plugins/iconify": {
+      "types": "./dist/plugins/iconify/index.d.ts",
+      "import": "./dist/plugins/iconify/index.mjs",
+      "export": "./src/plugins/iconify/index.ts",
+      "require": "./dist/plugins/iconify/index.js"
+    },
+    "./theme": {
+      "types": "./dist/theme/index.d.ts",
+      "import": "./dist/theme/index.mjs",
+      "export": "./src/theme/index.ts",
+      "require": "./dist/theme/index.js"
+    },
+    "./providers": {
+      "types": "./dist/providers/index.d.ts",
+      "import": "./dist/providers/index.mjs",
+      "export": "./src/providers/index.ts",
+      "require": "./dist/providers/index.js"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.mjs",
+      "export": "./src/utils/index.ts",
+      "require": "./dist/utils/index.js"
+    },
+    "./styles.layer.css": "./dist/styles.layer.css",
+    "./styles.css": "./dist/styles.css",
+    "./styles/*": "./dist/styles/*"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsup && shx cp node_modules/@mantine/core/styles.layer.css dist/styles.layer.css && shx cp node_modules/@mantine/core/styles.css dist/styles.css && shx cp -r node_modules/@mantine/core/styles dist/",
+    "dev": "tsup --watch",
+    "lint": "eslint --fix ../base --ext .tsx,.jsx,.ts --max-warnings 0",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@mantine/core": "^8.0.2",
+    "@mantine/hooks": "^8.0.2",
+    "@mantine/modals": "^8.0.2",
+    "js-cookie": "^3.0.5",
+    "react-icons": "^5.5.0",
+    "shx": "^0.4.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}

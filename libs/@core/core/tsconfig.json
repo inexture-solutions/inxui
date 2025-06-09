@@ -1,0 +1,26 @@
+{
+  "include": [
+    "../base",
+    "src/*.ts",
+    "src/types/index.type.ts",
+    "src/types/index.d.ts"
+  ],
+  "compilerOptions": {
+    "lib": [
+      "ESNext",
+      "dom"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution":"Bundler",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}

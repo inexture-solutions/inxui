@@ -6,6 +6,6 @@ export default defineConfig((options) => ({
   format: ["cjs", "esm"],
   dts: true,
   sourcemap: true,
-  external: ["react", "@mantine/dates", "@inexture/base", "dayjs"],
+  external: ["react", "@mantine/dates", "@inexture/core", "dayjs"],
   ...options,
 }));

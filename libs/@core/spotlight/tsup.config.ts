@@ -6,6 +6,6 @@ export default defineConfig((options) => ({
   format: ["cjs", "esm"],
   dts: true,
   sourcemap: true,
-  external: ["react", "@mantine/spotlight", "@inexture/base"],
+  external: ["react", "@mantine/spotlight", "@inexture/core"],
   ...options,
 }));

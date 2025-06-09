@@ -9,7 +9,7 @@ export default defineConfig((options) => ({
   external: [
     "react",
     "@mantine/tiptap",
-    "@inexture/base",
+    "@inexture/core",
     "@tiptap/extension-underline",
     "@tiptap/react",
     "@tiptap/starter-kit",
