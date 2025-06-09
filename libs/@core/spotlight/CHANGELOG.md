@@ -1,5 +1,12 @@
 # @inexture/spotlight
 
+## 2.0.0
+
+### Patch Changes
+
+- Updated dependencies [[`3c30f21`](https://github.com/inexture-solutions/inxui/commit/3c30f21adf24163a13b315cfe827fe68465ba0a1)]:
+  - @inexture/core@1.1.0
+
 ## 1.0.0
 
 ### Major Changes

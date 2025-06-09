@@ -1,6 +1,6 @@
 {
   "name": "@inexture/carousel",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "description": "A lightweight and customizable carousel library built on top of Mantine's carousel component. It provides pre-configured carousel components and utilities for seamless integration into React applications.",
   "sideEffects": [
