@@ -1,6 +1,6 @@
 {
   "name": "@inexture/modals",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A lightweight and customizable modals library built on top of Mantine's modals component. It provides pre-configured modal components and utilities for seamless integration into React applications.",
   "license": "MIT",
   "main": "./dist/index.js",
