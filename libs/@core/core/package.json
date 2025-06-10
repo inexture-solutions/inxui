@@ -1,6 +1,6 @@
 {
   "name": "@inexture/core",
-  "version": "16.0.0",
+  "version": "17.0.0",
   "license": "MIT",
   "description": "A core library for building customizable UI components and themes using Mantine. It provides pre-configured components, utilities, and theme management for seamless integration into React projects.",
   "sideEffects": [
