@@ -1,5 +1,16 @@
 # @inexture/dropzone
 
+## 17.0.0
+
+### Major Changes
+
+- [`09bfa26`](https://github.com/inexture-solutions/inxui/commit/09bfa267b5ccddb31d728f9dd8197c396b0bb44a) Thanks [@m4st3rai](https://github.com/m4st3rai)! - version bump
+
+### Patch Changes
+
+- Updated dependencies [[`09bfa26`](https://github.com/inexture-solutions/inxui/commit/09bfa267b5ccddb31d728f9dd8197c396b0bb44a)]:
+  - @inexture/core@17.0.0
+
 ## 1.0.0
 
 ### Minor Changes
