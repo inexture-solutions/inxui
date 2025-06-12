@@ -1,4 +1,3 @@
-import React from "react";
 import { MantineProvider, type MantineProviderProps } from "@mantine/core";
 import { PROVIDER_CONFIG } from "../theme";
 import { ModalsProvider, ModalsProviderProps } from "@mantine/modals";

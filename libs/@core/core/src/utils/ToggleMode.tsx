@@ -2,18 +2,15 @@ import { FC } from "react";
 import {
   ActionIcon,
   ActionIconProps,
-  Tooltip,
   TooltipProps,
   useComputedColorScheme,
   useMantineColorScheme,
 } from "@mantine/core";
 import { useShallowEffect } from "@mantine/hooks";
-import { IconBaseProps } from "react-icons";
 import { MdOutlineWbSunny, MdWbSunny } from "react-icons/md";
 
 const ToggleMode: FC<{
   button?: Partial<ActionIconProps>;
-  icon?: Partial<IconBaseProps>;
   tooltip?: Partial<TooltipProps>;
 }> = (props) => {
   const { colorScheme, setColorScheme } = useMantineColorScheme();
@@ -41,20 +38,15 @@ const ToggleMode: FC<{
   };
 
   return (
-    <Tooltip
-      label={`Switch ${colorScheme === "dark" ? "Light" : "Dark"} Mode`}
-      {...props.tooltip}
+    <ActionIcon
+      onClick={handleToggle}
+      size="md"
+      variant="default"
+      aria-label="Toggle"
+      {...props.button}
     >
-      <ActionIcon
-        onClick={handleToggle}
-        size="md"
-        variant="default"
-        aria-label="Toggle"
-        {...props.button}
-      >
-        {colorScheme === "dark" ? <MdOutlineWbSunny /> : <MdWbSunny />}
-      </ActionIcon>
-    </Tooltip>
+      {colorScheme === "dark" ? <MdOutlineWbSunny /> : <MdWbSunny />}
+    </ActionIcon>
   );
 };
 

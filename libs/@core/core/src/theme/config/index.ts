@@ -5,7 +5,7 @@ import type {
 } from "@mantine/core";
 import { createTheme, DEFAULT_THEME, mergeMantineTheme } from "@mantine/core";
 import { THEME_COLORS, THEME_NAME, ThemeNameT } from "../../components/colors";
-import { manager } from "./manager.ts";
+import { manager } from "./manager";
 import { themeComponents } from "../../components";
 
 const themeOverride: MantineThemeOverride = createTheme({
@@ -20,7 +20,7 @@ const themeOverride: MantineThemeOverride = createTheme({
 const theme: MantineTheme = mergeMantineTheme(DEFAULT_THEME, themeOverride);
 
 const PROVIDER_CONFIG: Partial<MantineProviderProps> = {
-  classNamesPrefix: "toolsify",
+  classNamesPrefix: "inexture",
   deduplicateCssVariables: true,
   withCssVariables: true,
   withGlobalClasses: true,
