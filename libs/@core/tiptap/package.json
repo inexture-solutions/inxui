@@ -1,6 +1,6 @@
 {
   "name": "@inexture/tiptap",
-  "version": "17.0.0",
+  "version": "18.0.0",
   "license": "MIT",
   "description": "A rich text editor library built on top of Mantine's Tiptap integration, providing seamless integration and additional toolsify-specific features for React applications.",
   "sideEffects": [
