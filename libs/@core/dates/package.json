@@ -38,7 +38,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@mantine/dates": "^8.0.2",
+    "@mantine/dates": "^8.1.0",
     "dayjs": "^1.11.13",
     "shx": "^0.4.0"
   },

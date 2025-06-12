@@ -38,7 +38,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@mantine/tiptap": "^8.0.2",
+    "@mantine/tiptap": "^8.1.0",
     "@tiptap/extension-underline": "^2.14.0",
     "@tiptap/pm": "^2.14.0",
     "@tiptap/react": "^2.14.0",

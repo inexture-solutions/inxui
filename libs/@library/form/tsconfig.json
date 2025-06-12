@@ -14,7 +14,10 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "react": [ "./node_modules/@types/react" ]
+    }
   },
   "exclude": ["dist", "node_modules"]
 }
