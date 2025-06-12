@@ -1,5 +1,12 @@
 # @inexture/tiptap
 
+## 18.0.0
+
+### Patch Changes
+
+- Updated dependencies [[`70be7c0`](https://github.com/inexture-solutions/inxui/commit/70be7c001afa5463cbe78d14be6db9b67a959e61)]:
+  - @inexture/core@17.1.0
+
 ## 17.0.0
 
 ### Major Changes
