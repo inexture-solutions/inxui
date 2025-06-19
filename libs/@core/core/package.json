@@ -18,11 +18,11 @@
       "export": "./src/index.ts",
       "require": "./dist/index.js"
     },
-    "./plugins/iconify": {
-      "types": "./dist/plugins/iconify/index.d.ts",
-      "import": "./dist/plugins/iconify/index.mjs",
-      "export": "./src/plugins/iconify/index.ts",
-      "require": "./dist/plugins/iconify/index.js"
+    "./plugins/icons": {
+      "types": "./dist/plugins/icons/index.d.ts",
+      "import": "./dist/plugins/icons/index.mjs",
+      "export": "./src/plugins/icons/index.ts",
+      "require": "./dist/plugins/icons/index.js"
     },
     "./theme": {
       "types": "./dist/theme/index.d.ts",

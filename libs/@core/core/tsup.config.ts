@@ -22,8 +22,8 @@ export default defineConfig([
   },
   {
     ...config,
-    entry: ["src/plugins/iconify/index.ts"],
-    outDir: "dist/plugins/iconify",
+    entry: ["src/plugins/icons/index.ts"],
+    outDir: "dist/plugins/icons",
   },
   {
     ...config,
