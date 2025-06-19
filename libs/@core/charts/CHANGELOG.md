@@ -1,5 +1,12 @@
 # @inexture/charts
 
+## 19.0.0
+
+### Patch Changes
+
+- Updated dependencies [[`659ce37`](https://github.com/inexture-solutions/inxui/commit/659ce373e82e70920631a66f001bc6f28bf97d71)]:
+  - @inexture/core@17.2.0
+
 ## 18.0.0
 
 ### Patch Changes
