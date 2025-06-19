@@ -1,5 +1,11 @@
 # @inexture/core
 
+## 17.2.0
+
+### Minor Changes
+
+- [`659ce37`](https://github.com/inexture-solutions/inxui/commit/659ce373e82e70920631a66f001bc6f28bf97d71) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Iconify renamed to icons
+
 ## 17.1.0
 
 ### Minor Changes

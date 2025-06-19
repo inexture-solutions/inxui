@@ -1,6 +1,6 @@
 {
   "name": "@inexture/spotlight",
-  "version": "18.0.0",
+  "version": "19.0.0",
   "license": "MIT",
   "description": "A spotlight search library built on top of Mantine's spotlight component, providing seamless integration and additional toolsify-specific features for React applications.",
   "sideEffects": [
