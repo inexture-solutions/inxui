@@ -1,5 +1,11 @@
 # @inexture/tiptap
 
+## 20.0.1
+
+### Patch Changes
+
+- [`05ff6b8`](https://github.com/inexture-solutions/inxui/commit/05ff6b82351d83e95e13ab3253b6f693d06c1dc6) Thanks [@m4st3rai](https://github.com/m4st3rai)! - y
+
 ## 20.0.0
 
 ### Major Changes
