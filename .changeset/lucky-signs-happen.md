@@ -1,0 +1,5 @@
+---
+"@inexture/tiptap": patch
+---
+
+y
