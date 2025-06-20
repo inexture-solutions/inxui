@@ -1,11 +1,16 @@
-import { defineConfig } from "tsup";
+import { defineConfig, Options } from "tsup";
 
-export default defineConfig((options) => ({
+const config: Options = {
   name: "tiptap",
-  entry: ["src/index.ts"],
   format: ["cjs", "esm"],
   dts: true,
+  minify: true,
+  minifySyntax: true,
+  minifyWhitespace: true,
   sourcemap: true,
+  minifyIdentifiers: true,
+  bundle: true,
+  treeshake: false,
   external: [
     "react",
     "@mantine/tiptap",
@@ -13,7 +18,23 @@ export default defineConfig((options) => ({
     "@tiptap/extension-underline",
     "@tiptap/react",
     "@tiptap/starter-kit",
-    "@tiptap/pm",
   ],
-  ...options,
-}));
+};
+
+export default defineConfig([
+  {
+    ...config,
+    entry: ["src/index.ts"],
+    outDir: "dist",
+  },
+  {
+    ...config,
+    entry: ["src/extensions/index.ts"],
+    outDir: "dist/extensions",
+    esbuildOptions(options) {
+      options.banner = {
+        js: '"use client"',
+      };
+    },
+  },
+]);

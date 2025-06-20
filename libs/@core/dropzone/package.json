@@ -37,7 +37,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@mantine/dropzone": "^8.1.0",
+    "@mantine/dropzone": "^8.1.1",
     "shx": "^0.4.0"
   },
   "peerDependencies": {
