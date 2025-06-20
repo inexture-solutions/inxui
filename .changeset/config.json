@@ -10,7 +10,6 @@
     "tag": "snapshot"
   },
   "changelog": ["@changesets/changelog-github", { "repo": "inexture-solutions/inxui" }],
-  "ignore": ["testing"],
   "message": "Release: updated versions for {packages} on {branch}",
   "versionOptions": {
     "bumpVersionsWithWorkspaceProtocol": true,
