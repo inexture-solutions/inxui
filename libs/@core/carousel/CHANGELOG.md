@@ -1,5 +1,16 @@
 # @inexture/carousel
 
+## 20.0.0
+
+### Major Changes
+
+- [`693dc20`](https://github.com/inexture-solutions/inxui/commit/693dc20df83d992fa8b3edcbc919afda6747a901) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Tiptap updated and other core deps updated
+
+### Patch Changes
+
+- Updated dependencies [[`693dc20`](https://github.com/inexture-solutions/inxui/commit/693dc20df83d992fa8b3edcbc919afda6747a901)]:
+  - @inexture/core@18.0.0
+
 ## 19.0.0
 
 ### Patch Changes
