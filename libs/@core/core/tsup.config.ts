@@ -1,4 +1,5 @@
 import { defineConfig, Options } from "tsup";
+import * as fs from "node:fs";
 
 const config: Options = {
   name: "core",
@@ -14,17 +15,36 @@ const config: Options = {
   external: ["react", "react-dom"],
 };
 
+const iconDirs = fs
+  .readdirSync("src/icons")
+  .filter((dir) => fs.statSync(`src/icons/${dir}`).isDirectory());
+
+// Dynamically generate icon configs
+const iconSubPackages = iconDirs.map((dir) => ({
+  ...config,
+  entry: [`src/icons/${dir}/index.ts`],
+  outDir: `dist/icons/${dir}`,
+}));
+
 export default defineConfig([
+  // Main index
   {
     ...config,
     entry: ["src/index.ts"],
     outDir: "dist",
   },
+
+  // Icons root index
   {
     ...config,
-    entry: ["src/plugins/icons/index.ts"],
-    outDir: "dist/plugins/icons",
+    entry: ["src/icons/index.ts"],
+    outDir: "dist/icons",
   },
+
+  // Dynamic icon entries
+  ...iconSubPackages,
+
+  // Providers
   {
     ...config,
     entry: ["src/providers/index.ts"],
@@ -35,6 +55,8 @@ export default defineConfig([
       };
     },
   },
+
+  // Theme
   {
     ...config,
     entry: ["src/theme/index.ts"],
@@ -45,6 +67,8 @@ export default defineConfig([
       };
     },
   },
+
+  // Utils
   {
     ...config,
     entry: ["src/utils/index.ts"],

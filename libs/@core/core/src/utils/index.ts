@@ -1,1 +1,1 @@
-export { ToggleMode } from "./ToggleMode.tsx";
+export { ToggleMode } from "./ToggleMode";

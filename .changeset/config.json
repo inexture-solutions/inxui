@@ -17,6 +17,7 @@
     "useCalculatedVersionForSnapshots": true,
     "updateInternalDependencies": "patch"
   },
+  "ignore": ["docs"],
   "release": {
     "tag": "latest"
   }

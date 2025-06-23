@@ -15,14 +15,20 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "export": "./src/index.ts",
+      "export": "./dist/index.js",
       "require": "./dist/index.js"
     },
-    "./plugins/icons": {
-      "types": "./dist/plugins/icons/index.d.ts",
-      "import": "./dist/plugins/icons/index.mjs",
-      "export": "./src/plugins/icons/index.ts",
-      "require": "./dist/plugins/icons/index.js"
+    "./icons": {
+      "types": "./dist/icons/index.d.ts",
+      "import": "./dist/icons/index.mjs",
+      "export": "./dist/icons/index.js",
+      "require": "./dist/icons/index.js"
+    },
+    "./icons/*": {
+      "types": "./dist/icons/*/index.d.ts",
+      "import": "./dist/icons/*/index.mjs",
+      "export": "./dist/icons/*/index.js",
+      "require": "./dist/icons/*/index.js"
     },
     "./theme": {
       "types": "./dist/theme/index.d.ts",
