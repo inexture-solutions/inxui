@@ -1,5 +1,14 @@
 # @inexture/form
 
+## 21.0.0
+
+### Patch Changes
+
+- Updated dependencies [[`faf85bc`](https://github.com/inexture-solutions/inxui/commit/faf85bc6a2a4ce213a08e2a05ca565088e3f2879)]:
+  - @inexture/core@19.0.0
+  - @inexture/dates@21.0.0
+  - @inexture/dropzone@21.0.0
+
 ## 20.0.0
 
 ### Major Changes

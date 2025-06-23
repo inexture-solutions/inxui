@@ -1,6 +1,6 @@
 {
   "name": "@inexture/highlight",
-  "version": "20.0.0",
+  "version": "21.0.0",
   "description": "A lightweight and customizable syntax highlighting library built on top of Mantine's code highlight component. It provides pre-configured components and utilities for seamless integration into React applications.",
   "license": "MIT",
   "sideEffects": [
