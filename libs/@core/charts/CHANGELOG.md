@@ -1,5 +1,11 @@
 # @inexture/charts
 
+## 21.1.0
+
+### Minor Changes
+
+- [`86968a6`](https://github.com/inexture-solutions/inxui/commit/86968a61ada1432e92c4c932e69fe36c04a2e7c5) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Deps updated
+
 ## 21.0.0
 
 ### Patch Changes
