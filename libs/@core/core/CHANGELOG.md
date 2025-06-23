@@ -1,5 +1,11 @@
 # @inexture/core
 
+## 19.0.0
+
+### Major Changes
+
+- [`faf85bc`](https://github.com/inexture-solutions/inxui/commit/faf85bc6a2a4ce213a08e2a05ca565088e3f2879) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Icon package updated
+
 ## 18.0.0
 
 ### Major Changes
