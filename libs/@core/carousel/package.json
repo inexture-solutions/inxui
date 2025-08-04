@@ -35,10 +35,10 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "tsup": "^8.5.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@mantine/carousel": "^8.1.1",
+    "@mantine/carousel": "^8.2.2",
     "embla-carousel-react": "^8.6.0",
     "shx": "^0.4.0"
   },
