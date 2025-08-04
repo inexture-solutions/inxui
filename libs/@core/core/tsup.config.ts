@@ -12,7 +12,13 @@ const config: Options = {
   minifyIdentifiers: true,
   bundle: true,
   treeshake: false,
-  external: ["react", "react-dom"],
+  external: [
+    "react",
+    "react-dom",
+    "@mantine/core",
+    "@mantine/hooks",
+    "@mantine/modals",
+  ],
 };
 
 const iconDirs = fs
