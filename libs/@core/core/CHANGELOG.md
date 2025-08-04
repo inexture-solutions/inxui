@@ -1,5 +1,15 @@
 # @inexture/core
 
+## 19.0.1
+
+### Patch Changes
+
+- [#70](https://github.com/inexture-solutions/inxui/pull/70) [`10633fb`](https://github.com/inexture-solutions/inxui/commit/10633fba58deda3618cf6ad68c8b4620309023b9) Thanks [@m4st3rai](https://github.com/m4st3rai)! - re-export React icon packs to improve TypeScript hints
+
+- [#68](https://github.com/inexture-solutions/inxui/pull/68) [`88a0885`](https://github.com/inexture-solutions/inxui/commit/88a088502258c2804e995b94fbaf33bb43c33558) Thanks [@m4st3rai](https://github.com/m4st3rai)! - fixed colors
+
+- [#68](https://github.com/inexture-solutions/inxui/pull/68) [`2b5b442`](https://github.com/inexture-solutions/inxui/commit/2b5b4426edf95a355744d74b750c04f0811396dc) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Updated colors and packages
+
 ## 19.0.0
 
 ### Major Changes
