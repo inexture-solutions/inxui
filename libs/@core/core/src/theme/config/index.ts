@@ -4,14 +4,14 @@ import type {
   MantineThemeOverride,
 } from "@mantine/core";
 import { createTheme, DEFAULT_THEME, mergeMantineTheme } from "@mantine/core";
-import { THEME_COLORS, THEME_NAME, ThemeNameT } from "../../components/colors";
+import { THEME_COLORS, ThemeNameT } from "../components/colors";
 import { manager } from "./manager";
-import { themeComponents } from "../../components";
+import { themeComponents } from "../components";
 
 const themeOverride: MantineThemeOverride = createTheme({
   fontFamily: "var(--base-font)",
   colors: THEME_COLORS,
-  primaryColor: THEME_NAME.PRIMARY,
+  primaryColor: "primary",
   primaryShade: 7,
   cursorType: "pointer",
   components: themeComponents,

@@ -1,9 +1,3 @@
-import {
-  type DefaultMantineColor,
-  type MantineColorsTuple,
-  virtualColor,
-} from "@mantine/core";
-
 export const THEME_COLORS = {
   primary: [
     "#ffeaf3",
@@ -293,28 +287,6 @@ export const THEME_COLORS = {
     "#b41220",
     "#9e0419",
   ],
-  secondary: virtualColor({
-    name: "secondary",
-    light: "paleBlue",
-    dark: "deepBlue",
-  }),
-  info: virtualColor({ name: "info", light: "lightBlue", dark: "skyBlue" }),
-  success: virtualColor({ name: "success", light: "green", dark: "green" }),
-  warning: virtualColor({
-    name: "warning",
-    light: "yellow",
-    dark: "deepOrange",
-  }),
-  danger: virtualColor({ name: "danger", light: "deepRed", dark: "deepRed" }),
-};
+} as const;
 
-export type ThemeNameT = DefaultMantineColor | keyof typeof THEME_COLORS;
-
-export enum THEME_NAME {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
-  SUCCESS = "success",
-  WARNING = "warning",
-  INFO = "info",
-  DANGER = "danger",
-}
+export type ThemeNameT = keyof typeof THEME_COLORS;

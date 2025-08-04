@@ -1,13 +1,12 @@
 import { MantineProvider, type MantineProviderProps } from "@mantine/core";
-import { PROVIDER_CONFIG } from "../theme";
-import { ModalsProvider, ModalsProviderProps } from "@mantine/modals";
-import { type ThemeNameT } from "../components/colors";
+import { PROVIDER_CONFIG, ThemeNameT } from "../theme";
+import { ModalsProvider, type ModalsProviderProps } from "@mantine/modals";
 
 interface ThemeProviderProps {
   children: React.ReactNode;
   props?: Partial<MantineProviderProps>;
   modal?: Partial<ModalsProviderProps>;
-  themeName?: Partial<ThemeNameT>;
+  themeName?: ThemeNameT;
 }
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({
@@ -19,7 +18,10 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
   return (
     <MantineProvider
       {...PROVIDER_CONFIG}
-      theme={{ ...PROVIDER_CONFIG.theme, primaryColor: themeName }}
+      theme={{
+        ...PROVIDER_CONFIG.theme,
+        primaryColor: themeName,
+      }}
       {...props}
     >
       <ModalsProvider {...modal}>{children}</ModalsProvider>
