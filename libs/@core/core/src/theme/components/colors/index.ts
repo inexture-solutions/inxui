@@ -1,39 +1,4 @@
-import {
-  type DefaultMantineColor,
-  type MantineColorsTuple,
-} from "@mantine/core";
-
-export enum THEME_NAME {
-  PRIMARY = "primary",
-}
-
-export type ThemeNameT =
-  | (DefaultMantineColor & "primary")
-  | "blueGray"
-  | "brown"
-  | "tomato"
-  | "deepOrange"
-  | "brightGreen"
-  | "green"
-  | "lightBlue"
-  | "skyBlue"
-  | "paleBlue"
-  | "brightBlue"
-  | "deepBlue"
-  | "paleIndigo"
-  | "purple"
-  | "palePurple"
-  | "paleViolet"
-  | "darkPink"
-  | "brightPink"
-  | "pink"
-  | "violet"
-  | "magenta"
-  | "paleRed"
-  | "deepRed"
-  | "yellow";
-
-export const THEME_COLORS: Partial<Record<ThemeNameT, MantineColorsTuple>> = {
+export const THEME_COLORS = {
   primary: [
     "#ffeaf3",
     "#fcd4e1",
@@ -322,4 +287,6 @@ export const THEME_COLORS: Partial<Record<ThemeNameT, MantineColorsTuple>> = {
     "#b41220",
     "#9e0419",
   ],
-};
+} as const;
+
+export type ThemeNameT = keyof typeof THEME_COLORS;
