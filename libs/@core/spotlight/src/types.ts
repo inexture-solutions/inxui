@@ -1,1 +1,1 @@
-export type * from "@mantine/spotlight";
+export type * from "./mantine";

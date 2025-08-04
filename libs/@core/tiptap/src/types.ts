@@ -1,1 +1,1 @@
-export type * from "@mantine/tiptap";
+export type * from "./mantine";
