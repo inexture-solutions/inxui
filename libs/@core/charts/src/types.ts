@@ -1,1 +1,1 @@
-export type * from "@mantine/charts";
+export type * from "./mantine";
