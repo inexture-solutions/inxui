@@ -1,1 +1,1 @@
-export type * from "@mantine/carousel";
+export type * from "./mantine";
