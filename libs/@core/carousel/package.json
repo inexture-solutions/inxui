@@ -43,13 +43,13 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@mantine/carousel": "^8.2.2",
+    "@mantine/carousel": "^8.2.3",
     "embla-carousel-react": "^8.6.0",
     "shx": "^0.4.0"
   },
   "peerDependencies": {
-    "@inexture/core": "^20.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@inexture/core": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }

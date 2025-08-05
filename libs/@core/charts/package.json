@@ -43,14 +43,14 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@mantine/charts": "^8.2.2",
+    "@mantine/charts": "^8.2.3",
     "dayjs": "^1.11.13",
-    "recharts": "^3.1.0",
+    "recharts": "^3.1.1",
     "shx": "^0.4.0"
   },
   "peerDependencies": {
-    "@inexture/core": "^20.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@inexture/core": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }
