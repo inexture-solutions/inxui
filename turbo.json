@@ -15,6 +15,13 @@
       "cache": false,
       "persistent": false
     },
+    "test": {
+      "dependsOn": ["^test"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["coverage/**"],
+      "cache": true,
+      "persistent": false
+    },
     "clean": {
       "cache": false,
       "persistent": false
