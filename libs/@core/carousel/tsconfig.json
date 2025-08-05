@@ -1,14 +1,14 @@
 {
   "include": [
     ".",
-    "src/*.ts"
+    "src/**/*.ts"
   ],
   "compilerOptions": {
     "declaration": true,
     "declarationMap": true,
     "emitDeclarationOnly": true,
     "module": "ESNext",
-    "moduleResolution":"Bundler",
+    "moduleResolution": "Bundler"
   },
   "exclude": ["dist", "build", "node_modules"]
 }

@@ -30,10 +30,12 @@
     "dist/**/*"
   ],
   "scripts": {
+    "prebuild": "pnpm test",
     "build": "tsup && shx cp node_modules/@mantine/tiptap/styles.layer.css dist/styles.layer.css && shx cp node_modules/@mantine/tiptap/styles.css dist/styles.css",
     "dev": "tsup --watch",
     "lint": "eslint . --ext .tsx,.jsx,.ts --max-warnings 0",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "test": "vitest run --coverage"
   },
   "devDependencies": {
     "@inexture/core": "workspace:*",
@@ -41,7 +43,10 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "tsup": "^8.5.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "@vitest/coverage-v8": "^3.2.4",
+    "jsdom": "^26.1.0",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "@mantine/tiptap": "^8.2.2",
