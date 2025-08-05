@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@inexture/core": "workspace:*",
-    "@types/node": "^24.1.0",
+    "@types/node": "^24.2.0",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "tsup": "^8.5.0",
@@ -43,7 +43,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@mantine/code-highlight": "^8.2.2",
+    "@mantine/code-highlight": "^8.2.3",
     "shx": "^0.4.0"
   },
   "peerDependencies": {

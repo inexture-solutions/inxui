@@ -43,7 +43,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@mantine/dropzone": "^8.2.2",
+    "@mantine/dropzone": "^8.2.3",
     "shx": "^0.4.0"
   },
   "peerDependencies": {
