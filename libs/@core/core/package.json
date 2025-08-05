@@ -59,7 +59,8 @@
     "build": "tsup && shx cp node_modules/@mantine/core/styles.layer.css dist/styles.layer.css && shx cp node_modules/@mantine/core/styles.css dist/styles.css && shx cp -r node_modules/@mantine/core/styles dist/",
     "dev": "tsup --watch",
     "lint": "eslint --fix ../base --ext .tsx,.jsx,.ts --max-warnings 0",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "test": "vitest run --coverage"
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.6",
