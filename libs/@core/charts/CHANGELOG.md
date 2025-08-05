@@ -1,5 +1,16 @@
 # @inexture/charts
 
+## 22.0.1
+
+### Patch Changes
+
+- [#81](https://github.com/inexture-solutions/inxui/pull/81) [`2cc6f88`](https://github.com/inexture-solutions/inxui/commit/2cc6f8856dc38cb55dbb688ba4a1c364e7dfd5ed) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Test case added for core
+
+- [#81](https://github.com/inexture-solutions/inxui/pull/81) [`d4e2745`](https://github.com/inexture-solutions/inxui/commit/d4e274568eb8fea6a7671540d579fe9eee405d6e) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Test case included
+
+- Updated dependencies [[`2cc6f88`](https://github.com/inexture-solutions/inxui/commit/2cc6f8856dc38cb55dbb688ba4a1c364e7dfd5ed)]:
+  - @inexture/core@20.0.1
+
 ## 22.0.0
 
 ### Patch Changes
