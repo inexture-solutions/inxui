@@ -1,2 +1,2 @@
-export * from "./mantine";
+export * from "@mantine/tiptap";
 export * from "./types";
