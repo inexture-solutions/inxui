@@ -1,6 +1,6 @@
 {
   "name": "@inexture/dates",
-  "version": "22.0.0",
+  "version": "22.0.1",
   "description": "A lightweight and customizable date management library built on top of Mantine's date components. It provides pre-configured date utilities and components for seamless integration into React applications.",
   "license": "MIT",
   "sideEffects": [
