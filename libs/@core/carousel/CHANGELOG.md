@@ -1,5 +1,12 @@
 # @inexture/carousel
 
+## 22.0.0
+
+### Patch Changes
+
+- Updated dependencies [[`75ccdd1`](https://github.com/inexture-solutions/inxui/commit/75ccdd133132b305525e9197e944416358b3e146)]:
+  - @inexture/core@20.0.0
+
 ## 21.0.0
 
 ### Patch Changes
