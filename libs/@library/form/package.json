@@ -39,9 +39,9 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@inexture/core": "workspace:20.0.1",
-    "@inexture/dates": "workspace:22.0.1",
-    "@inexture/dropzone": "workspace:22.0.1",
+    "@inexture/core": "workspace:*",
+    "@inexture/dates": "workspace:*",
+    "@inexture/dropzone": "workspace:*",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",

@@ -32,7 +32,7 @@
     "test": "vitest run --coverage"
   },
   "devDependencies": {
-    "@inexture/core": "workspace:20.0.1",
+    "@inexture/core": "workspace:*",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
