@@ -1,5 +1,11 @@
 # @inexture/core
 
+## 20.0.1
+
+### Patch Changes
+
+- [#81](https://github.com/inexture-solutions/inxui/pull/81) [`2cc6f88`](https://github.com/inexture-solutions/inxui/commit/2cc6f8856dc38cb55dbb688ba4a1c364e7dfd5ed) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Test case added for core
+
 ## 20.0.0
 
 ### Major Changes
