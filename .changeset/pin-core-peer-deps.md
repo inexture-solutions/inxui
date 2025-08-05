@@ -8,6 +8,7 @@
 "@inexture/modals": patch
 "@inexture/spotlight": patch
 "@inexture/tiptap": patch
+"@inexture/form": patch
 ---
 
 Pin peer dependency versions instead of using "*".
