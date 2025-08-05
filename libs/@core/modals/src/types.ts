@@ -1,1 +1,1 @@
-export type * from "./mantine";
+export type * from "@mantine/modals";
