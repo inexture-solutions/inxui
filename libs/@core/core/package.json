@@ -71,9 +71,9 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@mantine/core": "^8.2.3",
-    "@mantine/hooks": "^8.2.3",
-    "@mantine/modals": "^8.2.3",
+    "@mantine/core": "^8.3.1",
+    "@mantine/hooks": "^8.3.1",
+    "@mantine/modals": "^8.3.1",
     "js-cookie": "^3.0.5",
     "react-icons": "5.5.0",
     "shx": "^0.4.0"
