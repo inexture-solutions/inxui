@@ -1,6 +1,6 @@
 {
   "name": "@inexture/charts",
-  "version": "22.0.2",
+  "version": "22.0.3",
   "description": "A lightweight and customizable charting library built on top of Mantine's chart components. It provides pre-configured chart components and utilities for seamless integration into React applications.",
   "license": "MIT",
   "sideEffects": [

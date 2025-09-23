@@ -1,6 +1,6 @@
 {
   "name": "@inexture/dropzone",
-  "version": "22.0.2",
+  "version": "22.0.3",
   "description": "A lightweight and customizable dropzone library built on top of Mantine's dropzone component. It provides pre-configured dropzone components and utilities for seamless integration into React applications.",
   "license": "MIT",
   "sideEffects": [
