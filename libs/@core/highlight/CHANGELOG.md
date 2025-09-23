@@ -1,5 +1,14 @@
 # @inexture/highlight
 
+## 22.0.3
+
+### Patch Changes
+
+- [#90](https://github.com/inexture-solutions/inxui/pull/90) [`0111fa0`](https://github.com/inexture-solutions/inxui/commit/0111fa07808e8c3768f0dcd1cec81578178312fc) Thanks [@m4st3rai](https://github.com/m4st3rai)! - dependencies upgrade
+
+- Updated dependencies [[`0111fa0`](https://github.com/inexture-solutions/inxui/commit/0111fa07808e8c3768f0dcd1cec81578178312fc)]:
+  - @inexture/core@20.0.3
+
 ## 22.0.2
 
 ### Patch Changes
