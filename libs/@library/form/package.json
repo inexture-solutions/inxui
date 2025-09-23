@@ -49,10 +49,10 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@hookform/resolvers": "^5.2.1",
-    "react-hook-form": "^7.62.0",
+    "@hookform/resolvers": "^5.2.2",
+    "react-hook-form": "^7.63.0",
     "react-dropzone-esm": "^15.2.0",
-    "zod": "^4.0.14"
+    "zod": "^4.1.11"
   },
   "peerDependencies": {
     "@inexture/core": "*",
