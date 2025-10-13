@@ -1,5 +1,16 @@
 # @inexture/spotlight
 
+## 23.0.0
+
+### Major Changes
+
+- [#92](https://github.com/inexture-solutions/inxui/pull/92) [`f87d1e7`](https://github.com/inexture-solutions/inxui/commit/f87d1e76bc149fe24272cadb039ec3a75d69d94d) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Dependencies Upgraded
+
+### Patch Changes
+
+- Updated dependencies [[`f87d1e7`](https://github.com/inexture-solutions/inxui/commit/f87d1e76bc149fe24272cadb039ec3a75d69d94d)]:
+  - @inexture/core@21.0.0
+
 ## 22.0.3
 
 ### Patch Changes
