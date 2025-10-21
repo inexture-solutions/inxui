@@ -1,5 +1,16 @@
 # @inexture/charts
 
+## 23.0.1
+
+### Patch Changes
+
+- [#94](https://github.com/inexture-solutions/inxui/pull/94) [`a2f4a06`](https://github.com/inexture-solutions/inxui/commit/a2f4a062354d47648aba79097a2816ed24eab90a) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Icons removed from core, added separate package: @inexture/icons
+
+- [#94](https://github.com/inexture-solutions/inxui/pull/94) [`362c35f`](https://github.com/inexture-solutions/inxui/commit/362c35ffa1aea2583b06dacde80a6299b728b701) Thanks [@m4st3rai](https://github.com/m4st3rai)! - (chore): Packages Upgraded
+
+- Updated dependencies [[`a2f4a06`](https://github.com/inexture-solutions/inxui/commit/a2f4a062354d47648aba79097a2816ed24eab90a), [`362c35f`](https://github.com/inexture-solutions/inxui/commit/362c35ffa1aea2583b06dacde80a6299b728b701)]:
+  - @inexture/core@21.0.1
+
 ## 23.0.0
 
 ### Major Changes
