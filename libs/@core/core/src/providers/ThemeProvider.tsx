@@ -1,6 +1,6 @@
 import { MantineProvider, type MantineProviderProps } from "@mantine/core";
-import { PROVIDER_CONFIG, ThemeNameT } from "../theme";
 import { ModalsProvider, type ModalsProviderProps } from "@mantine/modals";
+import { PROVIDER_CONFIG, ThemeNameT } from "../theme";
 
 interface ThemeProviderProps {
   children: React.ReactNode;
