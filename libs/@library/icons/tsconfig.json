@@ -1,0 +1,19 @@
+{
+  "include": ["./src/**/*.ts", "./src/**/*.d.ts"],
+  "compilerOptions": {
+    "lib": ["ESNext", "dom"],
+    "jsx": "preserve",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "composite": false,
+    "skipLibCheck": true,
+    "types": []
+  },
+  "exclude": ["dist", "node_modules", "tsup.config.ts"]
+}

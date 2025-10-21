@@ -21,17 +21,6 @@ const config: Options = {
   ],
 };
 
-const iconDirs = fs
-  .readdirSync("src/icons")
-  .filter((dir) => fs.statSync(`src/icons/${dir}`).isDirectory());
-
-// Dynamically generate icon configs
-const iconSubPackages = iconDirs.map((dir) => ({
-  ...config,
-  entry: [`src/icons/${dir}/index.ts`],
-  outDir: `dist/icons/${dir}`,
-}));
-
 export default defineConfig([
   // Main index
   {
@@ -39,16 +28,6 @@ export default defineConfig([
     entry: ["src/index.ts"],
     outDir: "dist",
   },
-
-  // Icons root index
-  {
-    ...config,
-    entry: ["src/icons/index.ts"],
-    outDir: "dist/icons",
-  },
-
-  // Dynamic icon entries
-  ...iconSubPackages,
 
   // Providers
   {
