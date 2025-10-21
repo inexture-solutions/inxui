@@ -1,5 +1,4 @@
 packages:
-  - apps/docs
   - libs/@core/*
   - libs/@library/*
 

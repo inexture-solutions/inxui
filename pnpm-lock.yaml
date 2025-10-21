@@ -23,6 +23,9 @@ importers:
       jsdom:
         specifier: ^26.1.0
         version: 26.1.0
+      npm-check-updates:
+        specifier: ^19.1.1
+        version: 19.1.1
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -2393,6 +2396,11 @@ packages:
     peerDependenciesMeta:
       encoding:
         optional: true
+
+  npm-check-updates@19.1.1:
+    resolution: {integrity: sha512-vy/uNbaK6Xfj/QzM8OXeALZak67E0uHjUlbdT1YGy4bdj0xlBU6AVd+8bscY8vlDpyzL6Y7mxcrX8kzEDeEpNg==}
+    engines: {node: '>=20.0.0', npm: '>=8.12.1'}
+    hasBin: true
 
   npm-run-path@2.0.2:
     resolution: {integrity: sha512-lJxZYlT4DW/bRUtFh1MQIWqmLwQfAxnqWG4HhEdjMlkrJYnJn0Jrr2u3mgxqaWsdiBc76TYkTG/mhrnYTuzfHw==}
@@ -5071,6 +5079,8 @@ snapshots:
   node-fetch@2.7.0:
     dependencies:
       whatwg-url: 5.0.0
+
+  npm-check-updates@19.1.1: {}
 
   npm-run-path@2.0.2:
     dependencies:

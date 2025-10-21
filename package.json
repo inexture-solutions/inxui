@@ -11,7 +11,7 @@
     "changeset": "changeset",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "release": "turbo run build && pnpm changeset publish",
-    "updates": "node check.updates.ts",
+    "updates": "node check.updates.js",
     "test": "turbo test"
   },
   "devDependencies": {
@@ -19,6 +19,7 @@
     "@changesets/cli": "^2.29.5",
     "@types/node": "^24.1.0",
     "@vitest/coverage-v8": "^3.2.4",
+    "npm-check-updates": "^19.1.1",
     "jsdom": "^26.1.0",
     "prettier": "^3.6.2",
     "turbo": "^2.5.5",
