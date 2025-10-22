@@ -49,8 +49,8 @@
     "shx": "^0.4.0"
   },
   "peerDependencies": {
-    "@inexture/core": "*",
-    "react": "*",
-    "react-dom": "*"
+    "@inexture/core": "^21.0.1",
+    "react": ">=18",
+    "react-dom": ">=18"
   }
 }

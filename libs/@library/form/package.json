@@ -43,8 +43,8 @@
     "@inexture/dates": "workspace:*",
     "@inexture/dropzone": "workspace:*",
     "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
     "tsup": "^8.5.0",
     "typescript": "^5.9.3"
   },
@@ -55,10 +55,10 @@
     "zod": "^4.1.12"
   },
   "peerDependencies": {
-    "@inexture/core": "*",
-    "@inexture/dates": "*",
-    "@inexture/dropzone": "*",
-    "react": "*",
-    "react-dom": "*"
+    "@inexture/core": "^21.0.1",
+    "@inexture/dates": "^23.0.1",
+    "@inexture/dropzone": "^23.0.1",
+    "react": ">=18",
+    "react-dom": ">=18"
   }
 }
