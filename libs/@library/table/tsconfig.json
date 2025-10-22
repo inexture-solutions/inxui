@@ -1,16 +1,16 @@
 {
-  "include": [".", "./src/types/index.d.ts", "./src/*.ts"],
+  "include": [".", "./src/*.ts"],
   "compilerOptions": {
     "lib": ["ESNext", "dom"],
-    "jsx": "preserve",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "declaration": true,
     "emitDeclarationOnly": true,
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
+    "allowSyntheticDefaultImports": true
   },
   "exclude": ["dist", "node_modules"]
 }

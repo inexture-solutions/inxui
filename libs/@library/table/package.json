@@ -1,8 +1,11 @@
 {
-  "name": "@inexture/form",
-  "version": "23.0.1",
+  "name": "@inexture/table",
+  "version": "0.0.0",
   "license": "MIT",
-  "description": "A comprehensive library of form components built with Mantine and React Hook Form, providing seamless form management with TypeScript support.",
+  "description": "A comprehensive library of Table and Table components built with Mantine and Mantine React Table, providing seamless table management with TypeScript support.",
+  "sideEffects": [
+    "./dist/styles.css"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,38 +13,35 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "export": "./src/index.ts",
-      "require": "./dist/index.js"
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
     },
     "./components": {
       "types": "./dist/components/index.d.ts",
       "import": "./dist/components/index.mjs",
-      "require": "./dist/components/index.js"
+      "require": "./dist/components/index.js",
+      "default": "./dist/components/index.js"
     },
     "./providers": {
       "types": "./dist/providers/index.d.ts",
       "import": "./dist/providers/index.mjs",
-      "require": "./dist/providers/index.js"
+      "require": "./dist/providers/index.js",
+      "default": "./dist/providers/index.js"
     },
-    "./plugins/zod": {
-      "types": "./dist/plugins/zod/index.d.ts",
-      "import": "./dist/plugins/zod/index.mjs",
-      "export": "./src/plugins/zod/index.ts",
-      "require": "./dist/plugins/zod/index.js"
-    }
+    "./styles.css": "./dist/styles.css"
   },
   "files": [
     "dist/**/*"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "copy:styles": "shx cp node_modules/mantine-react-table/styles.css dist/styles.css",
+    "build": "tsup && npm run copy:styles",
+    "dev": "npm run copy:styles && tsup --watch",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
     "@inexture/core": "workspace:*",
     "@inexture/dates": "workspace:*",
-    "@inexture/dropzone": "workspace:*",
     "@types/node": "latest",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
@@ -49,15 +49,14 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@hookform/resolvers": "^5.2.2",
-    "react-hook-form": "^7.65.0",
-    "react-dropzone-esm": "^15.2.0",
-    "zod": "^4.1.12"
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.18",
+    "mantine-react-table": "2.0.0-beta.9",
+    "shx": "^0.4.0"
   },
   "peerDependencies": {
     "@inexture/core": "^21.0.2",
     "@inexture/dates": "^23.0.2",
-    "@inexture/dropzone": "^23.0.2",
     "react": ">=18",
     "react-dom": ">=18"
   }
