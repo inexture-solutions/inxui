@@ -1,6 +1,6 @@
 {
   "name": "@inexture/form",
-  "version": "23.0.1",
+  "version": "23.0.2",
   "license": "MIT",
   "description": "A comprehensive library of form components built with Mantine and React Hook Form, providing seamless form management with TypeScript support.",
   "main": "./dist/index.js",
@@ -55,7 +55,7 @@
     "zod": "^4.1.12"
   },
   "peerDependencies": {
-    "@inexture/core": "^21.0.2",
+    "@inexture/core": "^21.0.3",
     "@inexture/dates": "^23.0.2",
     "@inexture/dropzone": "^23.0.2",
     "react": ">=18",

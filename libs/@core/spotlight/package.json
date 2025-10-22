@@ -1,6 +1,6 @@
 {
   "name": "@inexture/spotlight",
-  "version": "23.0.2",
+  "version": "23.0.3",
   "license": "MIT",
   "description": "A spotlight search library built on top of Mantine's spotlight component, providing seamless integration and additional toolsify-specific features for React applications.",
   "sideEffects": [
@@ -47,7 +47,7 @@
     "shx": "^0.4.0"
   },
   "peerDependencies": {
-    "@inexture/core": "^21.0.2",
+    "@inexture/core": "^21.0.3",
     "react": ">=18",
     "react-dom": ">=18"
   }
