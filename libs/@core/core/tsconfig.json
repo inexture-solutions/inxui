@@ -6,24 +6,15 @@
     "src/types/index.d.ts"
   ],
   "compilerOptions": {
-    "lib": [
-      "ESNext",
-      "dom"
-    ],
+    "lib": ["ESNext", "dom"],
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "module": "ESNext",
     "target": "ESNext",
-    "moduleResolution":"Bundler",
+    "moduleResolution": "Bundler",
     "declaration": true,
     "emitDeclarationOnly": true,
-    "allowImportingTsExtensions": true,
-    "paths": {
-      "react": [ "./node_modules/@types/react" ]
-    }
+    "allowImportingTsExtensions": true
   },
-  "exclude": [
-    "dist",
-    "node_modules"
-  ]
+  "exclude": ["dist", "node_modules"]
 }
