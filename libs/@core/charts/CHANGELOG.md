@@ -1,5 +1,14 @@
 # @inexture/charts
 
+## 23.0.2
+
+### Patch Changes
+
+- [#96](https://github.com/inexture-solutions/inxui/pull/96) [`5f7d827`](https://github.com/inexture-solutions/inxui/commit/5f7d827c1be804aa376c2edcedbb74d2b38b54b9) Thanks [@m4st3rai](https://github.com/m4st3rai)! - Fixed pacakge deps and path issues
+
+- Updated dependencies [[`5f7d827`](https://github.com/inexture-solutions/inxui/commit/5f7d827c1be804aa376c2edcedbb74d2b38b54b9)]:
+  - @inexture/core@21.0.2
+
 ## 23.0.1
 
 ### Patch Changes
