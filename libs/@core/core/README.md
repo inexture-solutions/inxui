@@ -160,7 +160,7 @@ libs/@core/base/
 │   │   └── customizer/
 │   ├── types/
 │   │   ├── index.d.ts
-│   │   └── index.type.ts
+│   │   └── index.index.type.ts
 │   └── utils/
 │       ├── index.tsx
 │       └── ToggleMode.tsx
