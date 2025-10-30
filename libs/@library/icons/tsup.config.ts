@@ -1,10 +1,16 @@
 import { defineConfig, Options } from "tsup";
 import fs from "node:fs";
 
-const config: Options = {
+// Discover all icon subdirectories
+const iconDirs = fs
+  .readdirSync("src")
+  .filter((dir) => fs.statSync(`src/${dir}`).isDirectory());
+
+// Build a single multi-entry config to avoid parallel builds crashing on Windows
+const baseConfig: Options = {
   name: "icons",
   format: ["cjs", "esm"],
-  clean: false,
+  clean: true,
   dts: true,
   minify: true,
   minifySyntax: true,
@@ -19,31 +25,21 @@ const config: Options = {
   terserOptions: { compress: true, module: true, toplevel: true },
 };
 
-const iconDirs = fs
-  .readdirSync("src")
-  .filter((dir) => fs.statSync(`src/${dir}`).isDirectory());
+// Map entries: index plus one for each subdir => dist/<dir>/index.{js,mjs,d.ts}
+const entry: Record<string, string> = {
+  index: "src/index.ts",
+};
+for (const dir of iconDirs) {
+  entry[`${dir}/index`] = `src/${dir}/index.ts`;
+}
 
-// Dynamically generate icon configs
-const iconSubPackages = iconDirs.map((dir) => ({
-  ...config,
-  entry: [`src/${dir}/index.ts`],
-  outDir: `dist/${dir}`,
-  dts: {
-    entry: `src/${dir}/index.ts`,
+export default defineConfig({
+  ...baseConfig,
+  entry,
+  outDir: "dist",
+  esbuildOptions(options) {
+    options.banner = {
+      js: '"use client"',
+    };
   },
-}));
-
-export default defineConfig([
-  {
-    ...config,
-    entry: ["src/index.ts"],
-    outDir: "dist",
-    clean: true,
-    esbuildOptions(options) {
-      options.banner = {
-        js: '"use client"',
-      };
-    },
-  },
-  ...iconSubPackages,
-]);
+});
