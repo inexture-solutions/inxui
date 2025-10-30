@@ -1,5 +1,11 @@
 # @inexture/icons
 
+## 0.0.3
+
+### Patch Changes
+
+- [#100](https://github.com/inexture-solutions/inxui/pull/100) [`cc9d924`](https://github.com/inexture-solutions/inxui/commit/cc9d9247eb5147e9090fbf762a27d98f25d60355) Thanks [@m4st3rai](https://github.com/m4st3rai)! - (chore): Updated dependencies and fixed date picker
+
 ## 0.0.2
 
 ### Patch Changes

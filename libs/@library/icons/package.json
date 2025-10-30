@@ -1,6 +1,6 @@
 {
   "name": "@inexture/icons",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "description": "A comprehensive library of icon components from React Icons, providing seamless icons management with TypeScript support.",
   "main": "./dist/index.js",
