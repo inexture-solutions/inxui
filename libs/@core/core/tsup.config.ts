@@ -1,5 +1,4 @@
 import { defineConfig, Options } from "tsup";
-import * as fs from "node:fs";
 
 const config: Options = {
   name: "core",
@@ -25,47 +24,20 @@ const config: Options = {
   ],
 };
 
-export default defineConfig([
-  // Main index
-  {
-    ...config,
-    entry: ["src/index.ts"],
-    outDir: "dist",
+// Single multi-entry build to avoid parallel tsup runs and keep dist layout stable
+export default defineConfig({
+  ...config,
+  entry: {
+    index: "src/index.ts",
+    "providers/index": "src/providers/index.ts",
+    "theme/index": "src/theme/index.ts",
+    "utils/index": "src/utils/index.ts",
   },
-
-  // Providers
-  {
-    ...config,
-    entry: ["src/providers/index.ts"],
-    outDir: "dist/providers",
-    esbuildOptions(options) {
-      options.banner = {
-        js: '"use client"',
-      };
-    },
+  outDir: "dist",
+  esbuildOptions(options) {
+    // Preserve client directive for React entries; applied globally here which is safe
+    options.banner = {
+      js: '"use client"',
+    };
   },
-
-  // Theme
-  {
-    ...config,
-    entry: ["src/theme/index.ts"],
-    outDir: "dist/theme",
-    esbuildOptions(options) {
-      options.banner = {
-        js: '"use client"',
-      };
-    },
-  },
-
-  // Utils
-  {
-    ...config,
-    entry: ["src/utils/index.ts"],
-    outDir: "dist/utils",
-    esbuildOptions(options) {
-      options.banner = {
-        js: '"use client"',
-      };
-    },
-  },
-]);
+});

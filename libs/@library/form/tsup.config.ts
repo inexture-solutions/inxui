@@ -1,6 +1,6 @@
 import { defineConfig, Options } from "tsup";
 
-const config: Options = {
+const baseConfig: Options = {
   name: "form",
   format: ["cjs", "esm"],
   clean: true,
@@ -24,43 +24,19 @@ const config: Options = {
   terserOptions: { compress: true, module: true, toplevel: true },
 };
 
-export default defineConfig([
-  {
-    ...config,
-    entry: ["src/index.ts"],
-    outDir: "dist",
-    esbuildOptions(options) {
-      options.banner = {
-        js: '"use client"',
-      };
-    },
+// Single multi-entry build to avoid parallel tsup runs crashing on Windows
+export default defineConfig({
+  ...baseConfig,
+  entry: {
+    index: "src/index.ts",
+    "components/index": "src/components/index.ts",
+    "providers/index": "src/providers/index.ts",
+    "plugins/zod/index": "src/plugins/zod/index.ts",
   },
-  {
-    ...config,
-    name: "form:components",
-    entry: ["src/components/index.ts"],
-    outDir: "dist/components",
-    esbuildOptions(options) {
-      options.banner = {
-        js: '"use client"',
-      };
-    },
+  outDir: "dist",
+  esbuildOptions(options) {
+    options.banner = {
+      js: '"use client"',
+    };
   },
-  {
-    ...config,
-    name: "form:provider",
-    entry: ["src/providers/index.ts"],
-    outDir: "dist/providers",
-    esbuildOptions(options) {
-      options.banner = {
-        js: '"use client"',
-      };
-    },
-  },
-  {
-    ...config,
-    name: "form:plugin:zod",
-    entry: ["src/plugins/zod/index.ts"],
-    outDir: "dist/plugins/zod",
-  },
-]);
+});
